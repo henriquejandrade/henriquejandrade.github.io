@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{	
+    border-left-style: solid;
+    border-left-width: 10px;
+	border-left-color: #000;
+	
+	height: 100%;
+
+	padding: 50px 100px 50px 100px ;
+	margin: 0;
+}
+
+#working_id
+{
+	font-family: 'Source Sans Pro', sans-serif;
+	
+	background: #FFF;
+	min-width: 500px;
+	
+    position: relative;
+}
+
+.item
+{
+  	line-height: 100px;
+	vertical-align: middle;
+	
+	width: 80%;
+	height: 100px;
+	
+	background: #CCC;
+	
+	margin: auto;
+	margin-bottom: 5px;
+}
+
+.item:hover
+{
+	background: #999;
+	
+    cursor: pointer;
+}
+
+.iconDiv
+{
+	width: 100px;
+	height: 100px;
+	background: #000000;
+	
+	float: left;
+}
+
+.titleDiv
+{
+	font-size: 150%;
+	
+	padding-left: 10px;
+
+	float: left;
+}
+
+#pageTitle
+{
+	margin-bottom: 50px; /* Plus 5px from .item, we have 50px */
+}
+
+#pageTitleContent
+{	
+	font-size: 200%;	
+}
+

@@ -1,9 +1,137 @@
----
-layout: default
-title: Hank Quinlan, Horrible Cop
----
+<!DOCSTYLE html>
+<html>
 
-		<div class="blurb">
-			<h1>Hi there, I'm Hank Quinlan!</h1>
-			<p>I'm best known as the horrible cop from <em>A Touch of Evil</em>. Don't trust me. <a href="/about">Read more about my life...</a></p>
-		</div> 
+<head>
+    <title>HNRQNDRD</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="hnrqndrd.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-div" id="index-div">
+        <div class="jumbotron gray-box shadow">
+            <h1 id="indexh1">Henrique Andrade</h1>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-3">
+                    <img src="images/avatar.jpg" id="index-picture" class="card circle-rounded shadow" />
+                </div>
+                <div class="col">
+                    <div class="white-box rounded shadow">
+                        <p>
+                            Hey! I am an engineer and an artist. I code, I draw, I animate, I make games! Here you can check a lot of stuff I've been
+                            doing. Also, here I share many memories of my life with you.
+                        </p>
+
+                        <hr>
+
+                        <p>
+                            <a href="mailto:henriquejandrade@gmail.com">Mail me</a> and let's talk!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="white-box rounded shadow">
+                <p>
+                    I love mixing art and engineering. I have been coding games, user interfaces and general software projects. I like to be
+                    part of every stage of development within a project: from planning, to sketching, implementing and testing
+                    with users!
+                </p>
+                <hr>
+                <p>
+                    Below, you find a quick list of my likes. You can also find my full resume <a href="resume">here</a>
+                    or at the menu at the bottom of the page at any time. Please feel free to read it and/or contact me!
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card rounded shadow">
+                        <div class="card-title">
+                            <p>Coding</p>
+                        </div>
+                        <ul class="card-content">
+                            <li>C#</li>
+                            <li>JS</li>
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card rounded shadow">
+                        <div class="card-title">
+                            <p>Skills</p>
+                        </div>
+                        <ul class="card-content">
+                            <li>Game Dev</li>
+                            <li>Image Processing</li>
+                            <li>UI/UX</li>
+                            <li>Game Design</li>
+                            <li>Gamification</li>
+                            <li>Pixel Art</li>
+                            <li>Animation</li>
+                            <li>Scrum</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card rounded shadow">
+                        <div class="card-title">
+                            <p>Techs & Tools</p>
+                        </div>
+                        <ul class="card-content">
+                            <li>Unity3D</li>
+                            <li>Visual Studio</li>
+                            <li>Adobe Tools</li>
+                            <li>Monogame</li>
+                            <li>WPF</li>
+                            <li>Processing</li>
+                            <li>Eclipse</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card rounded shadow">
+                <div class="card-title">
+                    <p>More</p>
+                </div>
+
+                <ul id="index-menu">
+                    <li data-href="resume" class="clickable can-hover"><i class="icon fa fa-file-text-o" aria-hidden="true"></i>Resume</li>
+                    <li data-href="portfolio" class="clickable can-hover"><i class="icon fa fa-picture-o" aria-hidden="true"></i>Portfolio</li>
+                    <!--
+                    <li data-href="blog" class="clickable can-hover"><i class="icon fa fa-newspaper-o" aria-hidden="true"></i>Blog</li>
+                    -->
+                    <!--
+                    <li data-href="resume/index.html" class="clickable can-hover"><i class="icon fa fa-commenting-o" aria-hidden="true"></i>Blog</li>
+                    <li data-href="games/index.html" class="clickable can-hover"><i class="icon fa fa-gamepad" aria-hidden="true"></i>Games</li>
+                    <li data-href="layouts/album.html" class="clickable can-hover"><i class="icon fa fa-paint-brush" aria-hidden="true"></i>Artwork</li>
+                    -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="hnrqndrd.js"></script>
+</body>
+
+</html>

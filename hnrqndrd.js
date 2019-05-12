@@ -11,18 +11,18 @@ $(".clickable").mousedown(function (event) {
 
 });
 
-window.onload = function () {
-    runMarkdown();
-};
+// window.onload = function () {
+//     runMarkdown();
+// };
 
-function runMarkdown() {
-    var containerDiv = document.getElementById('sourceTA');
-    var text = containerDiv.innerText;
-    var converter = new showdown.Converter();
-    var html = converter.makeHtml(text);
+// function runMarkdown() {
+//     var containerDiv = document.getElementById('sourceTA');
+//     var text = containerDiv.innerText;
+//     var converter = new showdown.Converter();
+//     var html = converter.makeHtml(text);
 
-    containerDiv.innerHTML = html;
-}
+//     containerDiv.innerHTML = html;
+// }
 
 /* Make all divs disappear with animation:
  $("li").not(this).animate(

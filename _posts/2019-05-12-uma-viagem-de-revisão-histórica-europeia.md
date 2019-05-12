@@ -1,6 +1,3 @@
-Uma viagem de revisão histórica europeia
-===
-
 Introdução
 --- 
 

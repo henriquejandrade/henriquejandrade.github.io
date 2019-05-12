@@ -14,7 +14,7 @@ title: Blog
   <div class="content">
     <div class="content-more rounded shadow">Postagens</div>
 
-    <ul class="posts">
+    <ul class="posts rounded shadow">
 
       {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"

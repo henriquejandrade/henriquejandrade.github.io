@@ -14,14 +14,16 @@ title: Blog
   <div class="content">
     <div class="content-more rounded shadow">Postagens</div>
 
-    <ul class="white-box rounded shadow">
+    <div class="white-box rounded shadow">
+      <ul>
 
-      {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
-          title="{{ post.title }}">{{ post.title }}</a></li>
-      {% endfor %}
+        {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
+            title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
 
-    </ul>
+      </ul>
+    </div>
   </div>
 </div>
 <script type="text/javascript" src="../hnrqndrd.js"></script>

@@ -287,3 +287,8 @@ hr
 
     margin-bottom: 25px;
 }
+
+.blog-post p + .blog-post p
+{    
+    margin-top: 12px;
+}

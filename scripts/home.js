@@ -106,11 +106,11 @@ $(document).ready(function () {
     }, 30 * 1000);
 
     // Console
-    $('#input-bottom-bar textarea').focus(function () {
+    /* $('#input-bottom-bar textarea').focus(function () {
         $("#chat-div").animate({
             top: "10%",
         }, 250);
-    });
+    }); */
 
     //Clock
     setInterval(function () {

@@ -1,0 +1,294 @@
+/* General Rules */
+body 
+{ 
+    font-family: 'Work Sans';
+
+    background: #EEEEEE;
+
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* p
+{
+    margin: 0;
+} */
+
+img
+{
+    width: 100%;
+}
+
+hr
+{
+    margin: 12.5px 0;
+}
+
+.jumbotron h1 
+{
+    font-size: 2em;
+    text-align: center; 
+
+    padding: 15px;
+    margin: 0;
+}
+
+.jumbotron h3
+{
+    font-size: 1em;
+    text-align: center; 
+
+    padding: 10px;
+    margin: 0;
+}
+
+.jumbotron
+{
+    background: #FFFFFF;
+
+    min-height: 50px;
+
+    padding: 0; 
+}
+
+.card
+{
+    background: #FFFFFF;
+
+    border: 0;
+    
+    margin: 12.5px auto;
+}
+
+.card-title
+{
+    font-size: 1.2em;
+
+    background: #DDDDDD;
+
+    padding: 0 25px;
+    margin: 0;
+}
+
+.card-content
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-content-title
+{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.card-content-paragraph
+{
+    margin: 6.25px 0;
+}
+
+.card-content-details
+{
+    font-size: 0.8em;
+}
+
+.card-content li
+{
+    padding: 0 12.5px;
+}
+
+.white-box
+{
+    background: #FFFFFF;
+
+    padding: 25px;
+    margin: 12.5px auto;
+}
+
+.gray-box
+{
+    background: #DDDDDD;
+
+    padding: 0 25px;
+    margin: 25px auto;
+}
+
+.content
+{    
+    margin: 25px auto;
+}
+
+.subtitle
+{
+    font-size: 1.3em;
+}
+
+.icon
+{
+    font-size: 1.3em;
+    line-height: 50px;
+    text-align: center;
+
+    width: 50px;
+    height: 50px;
+
+    margin-right: 10px;
+}
+
+.shadow
+{
+    box-shadow: 2px 2px 2px #888888;
+}
+
+.clickable:hover
+{
+    cursor: pointer;
+}
+
+.can-hover:hover
+{
+    background: #DDDDDD;
+}
+
+.li-icon
+{
+    width: 50px;
+    height: 50px;
+
+    margin-right: 10px;
+}
+
+.content-more
+{
+    font-size: 1.2em;
+    line-height: 50px;
+    text-align: center;
+
+    background: #FFFFFF;
+
+    height: 50px;
+    margin: 25px auto;
+}
+
+/* Index Rules */
+#index-picture
+{
+    max-width: 300px;
+
+    margin: 12.5px auto;
+}
+
+#index-menu
+{ 
+    list-style-type: none;
+    font-size: 1.5em;
+    
+    padding: 0;
+    margin: 0;
+}
+
+#index-menu li
+{
+    height: 50px;
+    line-height: 50px;
+
+}
+
+/* Resume Rules */
+#avatar-img
+{
+    width: 100px;
+}
+
+.resume-category
+{
+    background: #FFFFFF;
+
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.resume-picture
+{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.resume-item
+{
+    padding: 12.5px 25px;
+}
+
+.resume-item p
+{
+    margin: 2px;
+}
+
+.resume-item-subtitle
+{
+    font-size: 1.1em;
+}
+
+/* Album Rules */
+.album-card
+{
+    background: #FFFFFF;
+
+    padding-bottom: 25px;
+    margin: 12.5px auto;
+}
+
+.album-thumbnails
+{
+    width: 100%;
+    margin: auto;
+    
+    padding-top: 5px;
+    padding-bottom: 56.25%;
+
+    position: relative;
+}
+
+.album-thumbnails video
+{
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.album-card-subtitle
+{
+    margin: auto;
+
+    padding: 0 50px;
+    margin-bottom: 12.5px;
+}
+
+.album-img-container-lg
+{
+    max-width: 500px;
+    padding: 12.5px;
+
+    margin-bottom: 25px;
+}
+
+.album-img-container-md
+{
+    max-width: 250px;
+    padding: 12.5px;
+
+    margin-bottom: 25px;
+
+}
+
+.album-img-container-sm
+{
+    max-width: 100px;
+    padding: 12.5px;
+
+    margin-bottom: 25px;
+}
+
+.blog-post p + .blog-post p
+{    
+    margin-top: 12px;
+}

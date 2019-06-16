@@ -1,137 +1,134 @@
-<!DOCSTYLE html>
 <html>
 
 <head>
-    <title>HNRQNDRD</title>
+    <link href="style/home.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Noto+Sans+HK&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-        crossorigin="anonymous">
-    <link href="hnrqndrd.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="scripts/home.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
+    <title>hnrqndrd</title>
 </head>
 
 <body>
-    <div class="main-div" id="index-div">
-        <div class="jumbotron gray-box shadow">
-            <h1 id="indexh1">Henrique Andrade</h1>
+    <div id="top-bar">
+        <div id="icon-top-bar">
+            <img id="icon-rolled-img-top-bar" src="images/hnrqndrd.png" />
+            <img id="icon-img-top-bar" src="images/hnrqndrd.png" />
         </div>
-
-        <div class="content">
-            <div class="row">
-                <div class="col-lg-3">
-                    <img src="images/avatar.jpg" id="index-picture" class="card circle-rounded shadow" />
-                </div>
-                <div class="col">
-                    <div class="white-box rounded shadow">
-                        <p>
-                            Hey! I am an engineer and an artist. I code, I draw, I animate, I make games! Here you can check a lot of stuff I've been
-                            doing. Also, here I share many memories of my life with you.
-                        </p>
-
-                        <hr>
-
-                        <p>
-                            <a href="mailto:henriquejandrade@gmail.com">Email me</a> and let's talk!
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="white-box rounded shadow">
-                <p>
-                    I love mixing art and engineering. I have been coding games, user interfaces and general software projects. I like to be
-                    part of every stage of development within a project: from planning, to sketching, implementing, and testing
-                    with users!
-                </p>
-                <hr>
-                <p>
-                    Below, you find a quick list of my interests. You can also find my full resume <a href="resume">here</a>
-                    or at the menu at the bottom of the page at any time. Please feel free to read it and/or contact me!
-                </p>
-            </div>
-
-            <div class="row">
-                <div class="col">
-                    <div class="card rounded shadow">
-                        <div class="card-title">
-                            <p>Coding</p>
-                        </div>
-                        <ul class="card-content">
-                            <li>C#</li>
-                            <li>JS</li>
-                            <li>Java</li>
-                            <li>C</li>
-                            <li>CSS</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card rounded shadow">
-                        <div class="card-title">
-                            <p>Skills</p>
-                        </div>
-                        <ul class="card-content">
-                            <li>Game Dev</li>
-                            <li>Image Processing</li>
-                            <li>UI/UX</li>
-                            <li>Game Design</li>
-                            <li>Gamification</li>
-                            <li>Pixel Art</li>
-                            <li>Animation</li>
-                            <li>Scrum</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card rounded shadow">
-                        <div class="card-title">
-                            <p>Techs & Tools</p>
-                        </div>
-                        <ul class="card-content">
-                            <li>Unity3D</li>
-                            <li>Visual Studio</li>
-                            <li>Adobe Tools</li>
-                            <li>Monogame</li>
-                            <li>WPF</li>
-                            <li>Processing</li>
-                            <li>Eclipse</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card rounded shadow">
-                <div class="card-title">
-                    <p>More</p>
-                </div>
-
-                <ul id="index-menu">
-                    <li data-href="resume" class="clickable can-hover"><i class="icon fa fa-file-text-o" aria-hidden="true"></i>Resume</li>
-                    <li data-href="portfolio" class="clickable can-hover"><i class="icon fa fa-picture-o" aria-hidden="true"></i>Portfolio</li>
-                    <!--
-                    <li data-href="blog" class="clickable can-hover"><i class="icon fa fa-newspaper-o" aria-hidden="true"></i>Blog</li>
-                    -->
-                    <!--
-                    <li data-href="resume/index.html" class="clickable can-hover"><i class="icon fa fa-commenting-o" aria-hidden="true"></i>Blog</li>
-                    <li data-href="games/index.html" class="clickable can-hover"><i class="icon fa fa-gamepad" aria-hidden="true"></i>Games</li>
-                    <li data-href="layouts/album.html" class="clickable can-hover"><i class="icon fa fa-paint-brush" aria-hidden="true"></i>Artwork</li>
-                    -->
-                </ul>
-            </div>
+        <div id="top-bar-title">
+            <p>Henrique Andrade</p>
         </div>
     </div>
-    <script type="text/javascript" src="hnrqndrd.js"></script>
+    <div id="content-div">
+        <div class="box">
+            <h2>Hey welcome!</h2>
+            <p>
+                I am Henrique, an engineer and an artist. I code, I draw, I animate, I make games!
+                Here you can check a lot of stuff I've been
+                doing. Also, here I share many memories of my life with you.
+            </p>
+
+            <hr>
+
+            <p>
+                <a href="mailto:henriquejandrade@gmail.com">Email me</a> and let's talk!
+            </p>
+        </div>
+        <div class="button-box"  href="resume/index.html">
+            <img src="icons/things/awarded-paper.png" />
+            <p>Resume</p>
+        </div>
+        <!-- <div class="button-box">
+            <img src="icons/things/sound.png" />
+            <p>Sound</p>
+        </div>
+        <div class="button-box">
+            <img src="icons/people/walking.png" />
+            <p>Anima</p>
+        </div> -->
+        <div class="button-box"  href="games/index.html">
+            <img src="icons/things/joystick.png" />
+            <p>Games</p>
+        </div>
+        <div class="button-box" out-href="https://www.linkedin.com/in/henrique-andrade-82148966/">
+            <img src="icons/symbols/linkedin.png" />
+            <p>LinkedIn</p>
+        </div>
+    </div>
+    <div id="chat-div">
+        <div id="chat-top-bar">
+            <div id="chat-close-icon-top-bar"></div>
+        </div>
+        <div id="text-chat-div">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's
+            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+            make
+            a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+            containing
+            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+            versions
+            of Lorem Ipsum.
+
+            Why do we use it?
+            It is a long established fact that a reader will be distracted by the readable content of a page when
+            looking at
+            its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+            opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem
+            ipsum'
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes
+            by
+            accident, sometimes on purpose (injected humour and the like).
+
+
+            Where does it come from?
+            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin
+            literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney
+            College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
+            and
+            going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum
+            comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil)
+            by
+            Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+            Renaissance.
+            The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
+            1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact
+            original
+            form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+            Where can I get some?
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in
+            some form, by injected humour, or randomised words which don't look even slightly believable. If you are
+            going
+            to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle
+            of
+            text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making
+            this
+            the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a
+            handful
+            of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is
+            therefore always free from repetition, injected humour, or non-characteristic words etc.
+        </div>
+    </div>
+    <div id="bottom-bar">
+        <div id="icon-bottom-bar">
+            <img src="icons/symbols/greater-than.png" />
+        </div>
+        <div id="input-bottom-bar">
+            <textarea></textarea>
+        </div>
+        <div id="clock-bottom-bar">
+            <p>00:00</p>
+        </div>
+    </div>
 </body>
 
 </html>

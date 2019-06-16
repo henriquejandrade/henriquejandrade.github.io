@@ -112,6 +112,12 @@ $(document).ready(function () {
         }, 250);
     }); */
 
+    // Preset clock
+    var rightNow = new Date($.now());
+    var hourNow = ("0" + rightNow.getHours()).slice(-2);
+    var minuteNow = ("0" + rightNow.getMinutes()).slice(-2);
+    $('#clock-bottom-bar p').text(hourNow + ":" + minuteNow);
+
     //Clock
     setInterval(function () {
         var rightNow = new Date($.now());

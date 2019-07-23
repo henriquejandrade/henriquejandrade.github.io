@@ -1,8 +1,9 @@
 ---
 layout: neurouppost
-title: "Bodyfeedback: Funcionamento Offline"
+title: "Bodyfeedback"
+subtitle: "Funcionamento Offline"
 date: 2019-07-23
-categories: neuroup
+categories: [neuroup, subpost]
 tags: [bodyfeedback, offline]
 ---
 

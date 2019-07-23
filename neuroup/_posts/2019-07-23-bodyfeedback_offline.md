@@ -1,5 +1,5 @@
 ---
-layout: neurouppost
+layout: neuroupsubpost
 title: "Bodyfeedback"
 subtitle: "Funcionamento Offline"
 date: 2019-07-23

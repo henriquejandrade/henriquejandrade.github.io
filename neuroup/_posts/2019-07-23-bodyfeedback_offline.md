@@ -1,4 +1,5 @@
 ---
+layout: neurouppost
 title: "Bodyfeedback: Funcionamento Offline"
 date: 2019-07-23
 categories: neuroup

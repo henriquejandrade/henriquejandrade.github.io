@@ -1,0 +1,29 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="main-div" id="blog-div">
+  <div class="jumbotron shadow">
+    <div data-href="http://hnrqndrd.com/neuroup/wiki" class="clickable can-hover">
+      <h3>NeuroUP Code Wiki</h3>
+    </div>
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  <div class="content">
+    <div class="content-more rounded shadow">Páginas</div>
+
+    <div class="white-box rounded shadow">
+      <ul>
+
+        {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
+            title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../hnrqndrd.js"></script>

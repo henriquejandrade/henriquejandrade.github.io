@@ -18,7 +18,7 @@ title: Blog
       <ul>
 
         {% for post in site.posts %}
-          {% if post.categories contains 'database' %}
+          {% if post.categories contains 'neuroupwiki' %}
             <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
                 title="{{ post.title }}">{{ post.title }}</a></li>
           {% endif %}

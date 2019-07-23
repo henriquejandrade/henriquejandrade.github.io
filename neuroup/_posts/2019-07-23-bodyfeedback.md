@@ -1,7 +1,7 @@
 ---
 title: "Bodyfeedback"
 date: 2019-07-23
-categories: [neuroupwiki]
+categories: neuroup
 ---
 
 Início

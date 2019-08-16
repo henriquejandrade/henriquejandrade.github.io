@@ -3,18 +3,11 @@ layout: default
 title: Blog
 ---
 
-<div class="main-div" id="blog-div">
-  <div class="jumbotron shadow">
-    <div data-href="http://hnrqndrd.com/" class="clickable can-hover">
-      <h3>Henrique Andrade</h3>
-    </div>
-    <h1>{{ page.title }}</h1>
-  </div>
+<div id="main-div">
+    <h2>Blog</h2>
 
-  <div class="content">
-    <div class="content-more rounded shadow">Postagens</div>
+    <div class="bold">Postagens</div>
 
-    <div class="white-box rounded shadow">
       <ul>
 
         {% for post in site.posts %}
@@ -25,7 +18,4 @@ title: Blog
         {% endfor %}
 
       </ul>
-    </div>
-  </div>
 </div>
-<script type="text/javascript" src="../hnrqndrd.js"></script>

@@ -1,15 +1,20 @@
-body {
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background: #FFFFFF;
+    padding: 0;
     margin: 0;
-    background: #EEEEEE;
 }
 
 #top-bar {
+    position: fixed;
     width: 100%;
-    height: 10%;
-    margin: 0;
+    height: 50pt;
+    top: 0;
     overflow: hidden;
-    font-family: 'Concert One';
+    z-index: 3;
+    font-family: 'Geometr415 Md BT', sans-serif;
     color: #000000;
+    background: #DDDDDD;
 }
 
 #icon-top-bar {
@@ -18,14 +23,6 @@ body {
 }
 
 #icon-img-top-bar {
-    margin-top: 0;
-    width: 100%;
-    height: 100%;
-}
-
-#icon-rolled-img-top-bar {
-    margin-top: -100%;
-    width: 100%;
     height: 100%;
 }
 
@@ -33,77 +30,60 @@ body {
     float: left;
     height: 100%;
     display: flex;
-    padding-left: 25px;
+    padding-left: 15pt;
     margin: auto;
-    font-size: 3em;
-}
-
-#top-rolled-bar-title {
-    float: left;
-    height: 100%;
-    display: flex;
-    padding-left: 25px;
-    margin: -100% 0 0 0;
-    font-size: 3em;
-}
-
-#top-bar-title p, #top-rolled-bar-title p {
-    margin: auto;
-    text-align: center;
-}
-
-#content-div {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto';
-    text-align: center;
-}
-
-#instruction-back-div {
-    margin-top: 10pt;
-    font-size: 0.8em;
-    color: #555555;
-}
-
-/* Resume Rules */
-
-.card-box {
-    margin: 15pt 25pt;
-    background: white;
-}
-
-.card-title {
-    margin-bottom: 10pt;
-    padding: 5pt 0 5pt 50pt;
     font-size: 1.5em;
-    text-align: left;
-}
-
-.card-item {
-    display: flex;
-    width: 100%;
-    padding: 10pt;
-    text-align: left;
-    height: auto;
-}
-
-.card-item-icon {
-    float: left;
-    width: 15%;
-}
-
-.card-item-icon .icon {
-    width: 100%;
-}
-
-.card-item-content {
-    float: left;
-    width: 85%;
-    padding: 0 25pt;
-    text-align: left;
-}
-
-.card-content-title {
-    font-size: 1.1em;
     font-weight: bold;
 }
+
+#top-bar-title p {
+    margin: auto;
+    text-align: center;
+}
+
+#page-content {
+    position: fixed;
+    top: 50pt;
+    overflow-y: auto;
+    width: 100%;
+    height: 90%;
+}
+
+#main-div {
+    padding: 25pt 0;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #main-div {
+        max-width: 90%;
+    }
+}
+
+.button {
+    background: #DDDDDD;
+    height: 50pt;
+    display: flex;
+    margin: 0 0 5pt 0;
+}
+
+    .button:hover {
+        background: #CCCCCC;
+    }
+
+    .button:active {
+        background: #EEEEEE;
+    }
+
+    .button:disabled {
+        background: #CCCCCC;
+    }
+
+    .button p {
+        font-family: 'Geometr415 Md BT', sans-serif;
+        font-size: 1.25em;
+        color: #000000;
+        padding-left: 15pt;
+        margin: auto 0;
+    }

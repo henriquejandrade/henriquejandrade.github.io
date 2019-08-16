@@ -88,7 +88,19 @@ body, html {
     margin: auto 0;
 }
 
-img .icon {
+.left {
+    float: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+div.title {
+    display: flex;
+}
+
+img.icon {
     width: 50pt;
     height: 50pt;
 }

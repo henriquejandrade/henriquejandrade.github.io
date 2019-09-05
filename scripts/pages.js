@@ -26,5 +26,21 @@ $(document).ready(function () {
             window.open($(this).attr("out-href"));
         }
     });
+
+    $.ajax({
+        url: "https://pt.wikipedia.org/w/api.php?origin=*&format=json&action=query&generator=random&grnnamespace=0&prop=revisions|images&rvprop=content",
+        success: function (data) {
+            alert(getTitle(data));
+        },
+        error: function (xhr, error) {
+            alert(xhr);
+            alert(error);
+        }
+    });
 });
 
+function getTitle(data) {
+    let pages = data.query.pages;
+    let firstKey = Object.keys(pages)[0];
+    return pages[firstKey].title;
+}

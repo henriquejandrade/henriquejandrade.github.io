@@ -11,10 +11,6 @@ $(".clickable").mousedown(function (event) {
 
 });
 
-// window.onload = function () {
-//     runMarkdown();
-// };
-
 // function runMarkdown() {
 //     var containerDiv = document.getElementById('sourceTA');
 //     var text = containerDiv.innerText;

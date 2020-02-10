@@ -1,0 +1,18 @@
+---
+layout: default
+title: Blog
+---
+
+<div id="main-div">
+    <h3>Postagens em português</h3>
+      <ul>
+
+        {% for post in site.posts %}
+          {% unless post.categories contains 'neuroup' %}
+            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
+                title="{{ post.title }}">{{ post.title }}</a></li>
+          {% endunless %}
+        {% endfor %}
+
+      </ul>
+</div>

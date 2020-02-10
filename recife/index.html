@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Recife
 ---
 
 <div id="main-div">
@@ -8,9 +8,9 @@ title: Blog
       <ul>
 
         {% for post in site.posts %}
-          {% unless post.categories contains 'neuroup' %}
+          {% if post.categories contains "recife" %}
             <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
-                title="{{ post.title }}">{{ post.title }}</a></li>
+                title="{{ post.page }}">{{ post.page }}</a></li>
           {% endunless %}
         {% endfor %}
 

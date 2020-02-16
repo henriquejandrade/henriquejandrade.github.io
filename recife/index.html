@@ -11,7 +11,7 @@ title: Recife
           {% if post.categories contains 'recife' %}
             <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
                 title="{{ post.page }}">{{ post.page }}</a></li>
-          {% endunless %}
+          {% endif %}
         {% endfor %}
 
       </ul>

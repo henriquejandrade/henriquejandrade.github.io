@@ -18,7 +18,7 @@ O primeiro mapa
 ---
 Ao iniciar a busca por esses documentos, a fim de usar meu efeito e confirmar minha hipótese de que realmente iria ficar legal, encontrei essa imagem:
 
-[]
+{% include image.html url="https://www.hnrqndrd.com/recife/maps/1639_1.jpg" description="Teste" %}
 
 Nesse mapa, na minha leitura inicial, eu me deparei com as pontes que eu atravesso todos os dias, com ruas que eu pedalo todos os dias e com vários detalhes que posicionam na história e explicam o motivo da cidade ser o que é hoje. Esse mapa me intrigou muito. Sempre soube que a cidade fora dominada por portugueses e holandeses, e esse mapa tão detalhado não estava em português, então talvez fosse holandês. Eu não sabia que havia um documento tão detalhado em holandês. Muita coisa nele me é familiar:
 

@@ -22,6 +22,10 @@ Ao iniciar a busca por esses documentos, a fim de usar meu efeito e confirmar mi
 
 Nesse mapa, na minha leitura inicial, eu me deparei com as pontes que eu atravesso todos os dias, com ruas que eu pedalo todos os dias e com vários detalhes que posicionam na história e explicam o motivo da cidade ser o que é hoje. Esse mapa me intrigou muito. Sempre soube que a cidade fora dominada por portugueses e holandeses, e esse mapa tão detalhado não estava em português, então talvez fosse holandês. Eu não sabia que havia um documento tão detalhado em holandês. Muita coisa nele me é familiar:
 
+![A ponte… do Recife?](https://www.hnrqndrd.com/recife/content/01/01.png)
+
+![Um forte de… cinco pontas?](https://www.hnrqndrd.com/recife/content/01/02.png)
+
 []
 
 E também me chamaram atenção os elementos que não fazem nenhum sentido, a primeira vista, estarem ali:

@@ -10,9 +10,7 @@ A história começa quando eu ainda era um estudante de engenharia da computaç�
 
 Quando aprendi a implementar o código desse efeito, comecei a testar com as fotos dos meus amigos e de animais, fazendo piadinhas ou fazendo transformações deles crianças em adultos. Depois de uns anos, percebi que eu poderia usar esse efeito para me vender. Eu poderia implementar formas interessantes de utilizar esse algoritmo e chamar atenção para meu portifólio. Percebi que seria muito interessante utilizar imagens de cidades, antes e depois, destacando as mudanças urbanas.
 
-```html
-<iframe src="https://giphy.com/embed/QB4OQJeKI2yUdwH028" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/QB4OQJeKI2yUdwH028">via GIPHY</a></p>
-```
+![](https://www.hnrqndrd.com/recife/morphing/guararapes1940.gif)
 
 Minha próxima percepção foi a de que o efeito seria ainda mais impressionante se eu utilizasse mapas históricos. A partir do momento que iniciei a busca por mapas antigos do Recife, cidade que nasci e fui criado, entrei em um planeta tão familiar e tão desconhecido ao mesmo tempo. Eu reconhecia todas as formas, todos os nomes, todos os espaços ali. Eu, ciclista, que observo a cidade a partir do espaço do carro, o asfalto, mas na altura de um humano em pé, comecei a levantar vários questionamentos e tudo aquilo me fez muito curioso.
 

@@ -19,6 +19,9 @@ img.map {
     font-family: 'Patua One', cursive;
     color: #000000;
     background: #DDDDDD;
+    border-style: solid;
+    border-color: orangered;
+    border-left: 4pt;
     padding-left: 15pt;
 }
 

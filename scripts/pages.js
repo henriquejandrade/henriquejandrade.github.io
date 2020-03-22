@@ -8,7 +8,7 @@ $(document).ready(function () {
     //     $(this).width($(this).parent().height());
     // });
 
-    $('.button').click(function (event) {
+    $('.button, .clickable').click(function (event) {
         // Navigation
         if ($(this).attr("href")) {
             switch (event.which) {

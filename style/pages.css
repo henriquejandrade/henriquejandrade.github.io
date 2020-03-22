@@ -117,4 +117,14 @@ img.icon {
 img.illustration {
     border-radius: 15pt;
     width: 100%;
+    border-style: solid;
+    border-color: orangered;
+    border-width: 0pt;
+    box-sizing: border-box;
+    transition: border-width 0.25s;
+}
+
+img.illustration:hover {
+    border-width: 4pt;
+    cursor: pointer;
 }

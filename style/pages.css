@@ -115,5 +115,6 @@ img.icon {
 }
 
 img.illustration {
+    border-radius: 15pt;
     width: 100%;
 }

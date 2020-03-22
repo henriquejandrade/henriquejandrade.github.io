@@ -48,6 +48,7 @@ hr {
 }
 
 .button {
+    font-family: 'Ubuntu', sans-serif;
     background: #DDDDDD;
     height: 50pt;
     display: flex;

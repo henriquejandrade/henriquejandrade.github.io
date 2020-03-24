@@ -119,6 +119,12 @@ img.illustration {
     width: 100%;
 }
 
+img.full-illustration {
+    border-radius: 0pt;
+    width: 100%;
+    margin: 0;
+}
+
 img.illustration.clickable {
     border-style: solid;
     border-color: orangered;

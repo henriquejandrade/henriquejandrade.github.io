@@ -106,7 +106,7 @@ p.docquote {
     font-style: italic;
     line-height: 1.5em;
     padding-left: 15pt;
-    border-left: 2px solid #222222;
+    border-left: 2px solid orangered;
 }
 
 img.icon {
@@ -125,7 +125,7 @@ img.full-illustration {
     margin: 0;
 }
 
-img.illustration.clickable {
+img.illustration.clickable, img.full-illustration.clickable {
     border-style: solid;
     border-color: orangered;
     border-width: 0pt;
@@ -133,7 +133,7 @@ img.illustration.clickable {
     transition: border-width 0.25s;
 }
 
-img.illustration.clickable:hover {
+img.illustration.clickable:hover, img.full-illustration.clickable:hover {
     border-width: 4pt;
     cursor: pointer;
 }

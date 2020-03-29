@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+
+    <link href="https://www.hnrqndrd.com/style/blog.css" rel="stylesheet">
+    <link href="https://www.hnrqndrd.com/style/maps.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Patua+One&family=Ubuntu&display=swap"
+        rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://www.hnrqndrd.com/scripts/pages.js"></script>
+</head>
+
+
+<body>
+    <div id="top-bar">
+        <div id="icon-top-bar" class="nav-button">
+            <img id="icon-img-top-bar" class="icon" src="https://www.hnrqndrd.com/icons/symbols/hnrqndrd.png" />
+        </div>
+        <div id="top-bar-title">
+            <p>{{ page.title }}</p>
+        </div>
+    </div>
+
+    <div id="mappage-content">
+        <!--#region Content -->
+        <img class="map" src="res/1502 Cantino.jpg">
+        <!--#endregion-->
+
+        <!--#region Bottom bar-->
+        <div id="bottom-bar">
+            <div id="bottom-bar-title">
+                <p>{{ page.maptitle }}</p>
+            </div>
+            <div id="bottom-bar-subtitle">
+                <p>{{ page.mapsubtitle }}</p>
+            </div>
+        </div>
+        <!--#endregion-->
+    </div>
+</body>
+
+</html>

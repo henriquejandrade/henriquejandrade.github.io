@@ -102,6 +102,10 @@ p.subtitle {
     margin-bottom: 1.5em;
 }
 
+p.subtitle a:link, p.subtitle a:visited, p.subtitle a:hover, p.subtitlea:active {
+    color: #999999;
+}
+
 p.docquote {
     font-style: italic;
     line-height: 1.5em;
@@ -138,8 +142,12 @@ img.illustration.clickable:hover, img.full-illustration.clickable:hover {
     cursor: pointer;
 }
 
-.full-embed-map
-{
+.full-embed-map {
     width: 100%;
     height: 600px;
+}
+
+.facebook-post {
+    width: 100%;
+    margin: 0 auto;
 }

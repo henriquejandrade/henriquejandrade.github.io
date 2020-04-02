@@ -48,15 +48,22 @@ hr {
 }
 
 .button {
+    display: flex;
     font-family: 'Ubuntu', sans-serif;
     background: #DDDDDD;
+
+    outline-style: solid;
+    outline-color: orangered;
+    outline-width: 0pt;
+    /*transition: outline-width 0.1s;*/
+
     height: 50pt;
-    display: flex;
     margin: 0 0 5pt 0;
 }
 
 .button:hover {
-    background: orangered;
+    /*background: orangered;*/
+    outline-width: 3pt;
 }
 
 .button:active {

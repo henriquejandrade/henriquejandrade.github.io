@@ -51,12 +51,10 @@ hr {
     display: flex;
     font-family: 'Ubuntu', sans-serif;
     background: #DDDDDD;
-
     outline-style: solid;
     outline-color: orangered;
     outline-width: 0pt;
     /*transition: outline-width 0.1s;*/
-
     height: 50pt;
     margin: 0 0 5pt 0;
 }
@@ -128,6 +126,20 @@ img.icon {
 img.illustration {
     border-radius: 15pt;
     width: 100%;
+}
+img.illustration.align-right {
+    float: right;
+    width: auto;
+    margin-left: 15pt;
+    margin-bottom: 15pt;
+}
+
+@media screen and (max-width: 800px) {
+    img.illustration.align-right {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
 }
 
 img.full-illustration {

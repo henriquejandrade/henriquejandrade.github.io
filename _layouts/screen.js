@@ -2,19 +2,38 @@ $(document).ready(resize);
 $(window).resize(resize);
 
 function resize() {
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
+    var windowWidth = $('#screen').parent().width();
+    var windowHeight = $('#screen').parent().height();
 
     var width = 0;
     var height = 0;
-    if (windowHeight > (2 / 3) * windowWidth) {
+
+    // Virtual parent div
+    if (windowHeight > (192 / 256) * windowWidth) {
         width = windowWidth;
-        height = 2 / 3 * width;
+        height = 192 / 256 * width;
     } else {
         height = windowHeight;
-        width = 3 / 2 * height;
+        width = 256 / 192 * height;
     }
 
-    $('#screen-borders').width(width);
-    $('#screen-borders').height(height);
+    var sWidth = width;
+    var sHeight = height;
+
+    if (width > height) {
+        sHeight = height;
+        sWidth = 256 * sHeight / 192;
+    } else {
+        sWidth = width;
+        sHeight = sWidth * 192 / 256;
+    }
+
+    var scaleWidth = sWidth / 256;
+    var scaleHeight = sHeight / 192;
+
+    $('#screen').css(
+        'transform',
+        'translate(-50%, -50%) ' +
+        'scale(' + scaleWidth + ', ' + scaleHeight + ')'
+    );
 }

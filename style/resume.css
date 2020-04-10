@@ -1,6 +1,6 @@
 div.icon-title {
     display: flex;
-    height: 50pt;
+    height: auto;
     line-height: 50pt;
     margin-bottom: 15pt;
 }

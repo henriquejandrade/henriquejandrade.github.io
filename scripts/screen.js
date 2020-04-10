@@ -68,7 +68,7 @@ function navigate(event, url, isOutRef) {
     if (url) {
         switch (event.which) {
             case 1:
-                window.location = url;// $(this).attr("href");
+                window.location = url;
                 break;
 
             case 2:
@@ -76,7 +76,7 @@ function navigate(event, url, isOutRef) {
                 break;
         }
     } else if (isOutRef) {
-        window.open($(this).attr("out-href"));
+        window.open(isOutRef);
     }
 }
 

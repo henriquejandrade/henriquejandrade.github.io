@@ -8,15 +8,19 @@ function resize() {
     var width = 0;
     var height = 0;
 
-    // Virtual parent div
-    if (windowHeight > (2 / 3) * windowWidth) {
+    // Calculates aspect display
+    var wAspect = 3;
+    var hAspect = 2;
+
+    if (windowHeight > (hAspect / wAspect) * windowWidth) {
         width = windowWidth;
-        height = 2 / 3 * width;
+        height = hAspect / wAspect * width;
     } else {
         height = windowHeight;
-        width = 3 / 2 * height;
+        width = wAspect / hAspect * height;
     }
 
+    // Calculates scaling
     var sWidth = width;
     var sHeight = height;
 

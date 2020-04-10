@@ -1,0 +1,21 @@
+div.icon-title {
+    display: flex;
+    height: 50pt;
+    line-height: 50pt;
+    margin-bottom: 15pt;
+}
+
+div.icon-title>img {
+    margin-right: 10pt;
+}
+
+p.section-subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+p.details {
+    font-size: 0.9em;
+    color: #333333;
+}

@@ -80,7 +80,7 @@ function slideTransitionUp(funcComplete) {
         top: 0
     },
         {
-            duration: 250,
+            duration: 500   ,
             complete: funcComplete
         });
 }

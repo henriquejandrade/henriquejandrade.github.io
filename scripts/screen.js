@@ -4,13 +4,18 @@ $(document).ready(function () {
         var href = $(this).attr("href");
         var outRef = $(this).attr("out-href");
 
-        slideTransitionUp(
-            function () {
-                navigate(
-                    event, 
-                    href, 
-                    outRef)
-            })
+        if (!outRef) {
+            slideTransitionUp(
+                function () {
+                    navigate(
+                        event,
+                        href,
+                        outRef)
+                })
+        }
+        else {
+            navigate(event, href, outRef);
+        }
     });
 
     resize();
@@ -80,7 +85,7 @@ function slideTransitionUp(funcComplete) {
         top: 0
     },
         {
-            duration: 500   ,
+            duration: 500,
             complete: funcComplete
         });
 }

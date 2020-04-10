@@ -4,20 +4,23 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>{{ page.title }}</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <link rel='stylesheet' type='text/css' media='screen' href='screen.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../style/screen.css'>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src='screen.js'></script>
+    <script src='../scripts/screen.js'></script>
+    <script src='../scripts/pages.js'></script>
 </head>
 
 <body>
     <div id="screen">
         <div id="content">
-            <img class="pixel" src="https://vignette.wikia.nocookie.net/pokemon/images/3/33/DP_Dawn.png" />
+            {{ content }}
         </div>
-        <div id="overlay-z"></div>
+        <!-- <div id="overlay-z">
+            <p class="text">hello world!</p>
+        </div> -->
     </div>
 </body>
 

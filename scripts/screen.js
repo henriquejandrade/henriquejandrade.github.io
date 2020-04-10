@@ -1,5 +1,5 @@
-$(document).ready(resize);
-$(window).resize(resize);
+$(document).ready(this.resize);
+$(window).resize(this.resize);
 
 function resize() {
     var windowWidth = $('#screen').parent().width();
@@ -9,12 +9,12 @@ function resize() {
     var height = 0;
 
     // Virtual parent div
-    if (windowHeight > (192 / 256) * windowWidth) {
+    if (windowHeight > (2 / 3) * windowWidth) {
         width = windowWidth;
-        height = 192 / 256 * width;
+        height = 2 / 3 * width;
     } else {
         height = windowHeight;
-        width = 256 / 192 * height;
+        width = 3 / 2 * height;
     }
 
     var sWidth = width;

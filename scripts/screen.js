@@ -1,5 +1,21 @@
-$(document).ready(this.resize);
-$(window).resize(this.resize);
+//$(document).ready(this.resize);
+$(document).ready(function () {
+    $('.button').click(function (event) {
+        var href = $(this).attr("href");
+        var outRef = $(this).attr("out-href");
+
+        slideTransitionUp(
+            function () {
+                navigate(
+                    event, 
+                    href, 
+                    outRef)
+            })
+    });
+
+    resize();
+});
+$(window).resize(resize);
 
 function resize() {
     var windowWidth = $('#screen').parent().width();
@@ -40,4 +56,31 @@ function resize() {
         'translate(-50%, -50%) ' +
         'scale(' + scaleWidth + ', ' + scaleHeight + ')'
     );
+}
+
+function navigate(event, url, isOutRef) {
+    // Navigation
+    if (url) {
+        switch (event.which) {
+            case 1:
+                window.location = url;// $(this).attr("href");
+                break;
+
+            case 2:
+                window.open(url);
+                break;
+        }
+    } else if (isOutRef) {
+        window.open($(this).attr("out-href"));
+    }
+}
+
+function slideTransitionUp(funcComplete) {
+    $('#div-transition').animate({
+        top: 0
+    },
+        {
+            duration: 250,
+            complete: funcComplete
+        });
 }

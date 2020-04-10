@@ -46,6 +46,19 @@ p {
     transform: translate(-50%, -50%);
 }
 
+#div-transition {
+    position: absolute;
+    background: white;
+    width: 100%;
+    top: 100%;
+    bottom: 0;
+}
+
+#div-transition #top-div {
+    background: #DDDDDD;
+    height: 50pt;
+}
+
 #content {
     position: relative;
     width: 100%;

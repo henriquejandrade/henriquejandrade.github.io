@@ -3,15 +3,38 @@ $(document).ready(function () {
     $('.button').click(function (event) {
         var href = $(this).attr("href");
         var outRef = $(this).attr("out-href");
+        var transition = $(this).attr("transition");
 
         if (!outRef) {
-            slideTransitionUp(
-                function () {
+            switch (transition) {
+                case 'slide':
+                    slideTransitionUp(
+                        function () {
+                            navigate(
+                                event,
+                                href,
+                                outRef)
+                        });
+                    break;
+
+                case 'fade':
+                    fadeBG(
+                        function () {
+                            navigate(
+                                event,
+                                href,
+                                outRef)
+                        });
+                    break;
+
+                default:
                     navigate(
                         event,
                         href,
-                        outRef)
-                })
+                        outRef);
+                    break;
+            }
+
         }
         else {
             navigate(event, href, outRef);
@@ -80,6 +103,9 @@ function navigate(event, url, isOutRef) {
     }
 }
 
+/*
+Transition Effects
+*/
 function slideTransitionUp(funcComplete) {
     $('#div-transition').animate({
         top: 0
@@ -88,4 +114,28 @@ function slideTransitionUp(funcComplete) {
             duration: 500,
             complete: funcComplete
         });
+}
+
+function fadeBG(funcComplete) {
+    $('#dim-div').animate({
+        opacity: 1
+    },
+        {
+            duration: 500,
+            complete: funcComplete
+        });
+}
+
+/*
+General Methods
+*/
+function showControls() {
+    var controls = $('#controls');
+    controls.css('opacity', '1');
+    controls.css('visibility', 'visible');
+    var controlImg = $('#controls .button');
+    controlImg.css('top', '50pt');
+    controlImg.animate({
+        top: 0
+    });
 }

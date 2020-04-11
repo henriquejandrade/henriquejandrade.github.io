@@ -22,16 +22,28 @@ p {
 }
 
 /*160 × 144 pixels,*/
-
-#screen-borders {
-    background: #222222;
-    width: auto;
-    height: auto;
+#dim-div {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0;
+    background: #555555;
+}
+
+#controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50pt;
+    visibility: collapse;
+    opacity: 0;
+}
+
+#controls .button {
+    position: relative;
 }
 
 #screen {

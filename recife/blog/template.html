@@ -1,54 +1,17 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+title: Blog
+---
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+<div id="main-div">
+    <h3>Postagens em português</h3>
+    <ul>
+        {% for post in site.posts %}
+        {% if post.categories contains "historia" %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
+                title="{{ post.title }}">{{ post.title }}</a></li>
+        {% endif %}
+        {% endfor %}
 
-    <link href="../../style/blog.css" rel="stylesheet">
-    <link href="../../style/pages.css" rel="stylesheet">
-    <!-- Old fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Concert+One|Noto+Sans+HK&display=swap" rel="stylesheet">
-
-    <!-- New fonts: Crimson Text, Patua One, Ubuntu -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Patua+One&family=Ubuntu&display=swap"
-        rel="stylesheet">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="../../scripts/pages.js"></script>
-</head>
-
-<body>
-    <!--#region Top bar -->
-    <div id="top-bar">
-        <div id="icon-top-bar" class="nav-button">
-            <img id="icon-img-top-bar" class="icon" src="../../icons/symbols/hnrqndrd.png" />
-        </div>
-        <div id="top-bar-title">
-            <p>Teste
-            </p>
-        </div>
-    </div>
-    <!--#endregion -->
-
-    <!--#region Content -->
-    <div id="page-content">
-        <div id="main-div">
-            <h3>Postagens em português</h3>
-            <ul>
-                {% for post in site.posts %}
-                {% if post.categories contains "historia" %}
-                <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
-                        title="{{ post.title }}">{{ post.title }}</a></li>
-                {% endif %}
-                {% endfor %}
-
-            </ul>
-        </div>
-    </div>
-    <!--#endregion-->
-</body>
-
-</html>/
+    </ul>
+</div>

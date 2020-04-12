@@ -6,13 +6,12 @@ title: Blog
 <div id="main-div">
     <h3>Postagens em português</h3>
     <ul>
-        {% for post in site.posts %}
-        {% if post.categories contains "historia" %}
-        <li><a href="{{ post.url }}" title="{{ post.title }}">
-                {{ post.title }}</a>
-        </li>
-        {% endif %}
+        {% for page in site.pages %}
+            {% if page.categories contains "historia" %}
+            <li><a href="{{ post.url }}" title="{{ post.title }}">
+                    {{ page.title }}</a>
+            </li>
+            {% endif %}
         {% endfor %}
-
     </ul>
 </div>

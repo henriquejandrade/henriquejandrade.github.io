@@ -1,6 +1,6 @@
 ---
 page: 1 🦀 Computacionalmente histórico
-categories: recife, historia
+categories: recife
 ---
 
 1 🦀 Computacionalmente histórico

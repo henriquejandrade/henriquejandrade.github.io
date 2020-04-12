@@ -1,18 +1,17 @@
 ---
 layout: default
-title: Blog
+title: História do Recife
 ---
 
 <div id="main-div">
-    <h3>Postagens em português</h3>
-    <ul>
-        {% for page in site.pages %}
-        {% if page.categories contains "historia" %}
-        <li><img src="{{ page.cover-image }}" width="300px" height="100px" /></li>
-        <li><a href="{{ page.url }}" title="{{ page.title }}">
-                {{ page.title }}</a>
-        </li>
-        {% endif %}
-        {% endfor %}
-    </ul>
+    <h3>Textos</h3>
+
+    {% for page in site.pages %}
+    {% if page.categories contains "historia" and page.categories contains "recife" %}
+    <div class="button" href="{{ page.url }}">
+      <img class="icon" src="../../icons/nature/crab.png" />
+      <p>{{ page.title }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
 </div>

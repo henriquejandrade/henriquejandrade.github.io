@@ -21,48 +21,12 @@ cover-image: https://www.hnrqndrd.com/recife/images/cover.jpg
 
   <h3>Textos</h3>
 
-  <div class="button" href="01">
+  {% for page in site.pages %}
+  {% if page.categories contains "historia" and page.categories contains "recife" %}
+  <div class="button" href="{{ page.url }}">
     <img class="icon" src="../../icons/nature/crab.png" />
-    <p>De onde saiu esse povo?</p>
+    <p>{{ page.title }}</p>
   </div>
-
-  <div class="button" href="02">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>Várzeas do Capibaribe</p>
-  </div>
-
-  <div class="button" href="03">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>Caetés, Tabajaras e Potiguares</p>
-  </div>
-
-  <div class="button" href="04">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>Expedições e Contatos</p>
-  </div>
-
-  <div class="button" href="05">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>A idealização de Pernambuco</p>
-  </div>
-
-  <div class="button" href="06">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>A aldeia de Igarassu</p>
-  </div>
-
-  <div class="button" href="07">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>Oh! Linda situação para uma vila!</p>
-  </div>
-
-  <div class="button" href="08">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>Miscigenação</p>
-  </div>
-
-  <div class="button" href="09.html">
-    <img class="icon" src="../../icons/nature/crab.png" />
-    <p>Aldeias, senzalas, favelas</p>
-  </div>
+  {% endif %}
+  {% endfor %}
 </div>

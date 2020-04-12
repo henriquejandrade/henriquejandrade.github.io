@@ -4,15 +4,12 @@ title: Blog
 ---
 
 <div id="main-div">
-    <h3>Postagens em português</h3>
-      <ul>
-
-        {% for post in site.posts %}
-          {% if post.categories contains "blog" %}
-            <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}"
-                title="{{ post.title }}">{{ post.title }}</a></li>
-          {% endif %}
-        {% endfor %}
-
-      </ul>
+    {% for page in site.page %}
+    {% if page.categories contains "blog" %}
+    <div class="button" href="{{ page.url }}">
+      <img class="icon" src="../../icons/things/paper.png" />
+      <p>{{ page.title }}</p>
+    </div>
+    {% endif %}
+    {% endfor %}
 </div>

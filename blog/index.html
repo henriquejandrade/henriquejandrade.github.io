@@ -4,7 +4,7 @@ title: Blog
 ---
 
 <div id="main-div">
-    {% for page in site.page %}
+    {% for page in site.pages %}
     {% if page.categories contains "blog" %}
     <div class="button" href="{{ page.url }}">
       <img class="icon" src="../../icons/things/paper.png" />

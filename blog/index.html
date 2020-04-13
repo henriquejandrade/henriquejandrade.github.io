@@ -4,9 +4,9 @@ parent: ..
 title: Blog
 ---
 
-<h1>Publicações</h1>
-
 <div id="main-div">
+  <h1>Publicações</h1>
+
     {% for page in site.pages %}
     {% if page.categories contains "blog" %}
     <div class="button" href="{{ page.url }}">

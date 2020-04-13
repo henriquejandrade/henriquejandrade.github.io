@@ -1,0 +1,81 @@
+---
+layout: blog
+parent: ../blog.html
+title: Diário Acadêmico 01: Medindo mapas
+metatitle: 🎓 Medindo Mapas
+categories: blog, academy
+keywords: mapas, academia, diário
+description:
+date: 04/12/2020
+---
+
+<div id="main-div">
+    <h1>Medindo Mapas</h1>
+    
+    <p>
+        Iniciando um trabalho de levantamento de métricas utilizadas por trabalhos de análise de imagens de satélite e
+        mapas, começo uma revisão da literatura, analisando trabalhos relevantes com esse propósito.
+    </p>
+
+    <h2>Trabalhos Considerados</h2>
+
+    <p>
+        Dentre muitos considerados relevantes para essa pesquisa, os trabalhos considerados nessa revisão de hoje são os
+        que apresentam resultados objetivos, comparando resultados de algoritmos de
+        aprendizagem de máquina com os dados já conhecidos.
+    </p>
+
+    <h3>
+        <i>A Deep Learning Approach for Population Estimation from Satellite Imagery</i>
+    </h3>
+
+    <p>
+        Esse trabalho levou em consideração informações do censo americano, disponibilizados por aquele estado e imagens
+        de satélite extraídas do Google Earth.
+    </p>
+
+    <p>
+        Utilizam métodos diferentes, cada método com informações agregadas diferentes, para estimar os resultados, por
+        condado, do censo americano de 2010. Para cada método, calculam o erro absoluto médio, o erro absoluto mediano,
+        o
+        coeficiente de determinação (R²) e o erro percentual absoluto médio, sempre comparados aos resultados oficiais
+        do
+        censo de 2010.
+    </p>
+
+    <p class="docquote">Disponível <a href="https://arxiv.org/abs/1708.09086">aqui</a>.</p>
+
+    <h3>
+        <i>Identifying Real Estate Opportunities Using Machine Learning</i>
+    </h3>
+
+    <p>
+        Trabalho espanhol que analisa característica de imóveis para predição de seu valor no mercado imobiliário. Reune
+        dados de sites de venda de imóveis populares na Espanha para treinar diferentes métodos de predição e compara
+        taxas
+        de erro como as do trabalho anterior.
+    </p>
+
+    <p class="docquote">Disponível <a href="https://arxiv.org/abs/1809.04933">aqui</a>.</p>
+
+    <h3>
+        <i>Take a Look Around: Using Street View and Satellite Images to Estimate House Prices</i>
+    </h3>
+
+    <p>
+        Trabalho inglês que utiliza que reproduz o realizado pelo trabalho espanhol anteriormente citado, mas utiliza
+        também
+        entradas visuais. Além dos dados dos imóveis, ele agrega imagens de satélite do mesmo e também uma foto de sua
+        fachada retirada do Google Street View. Utilizando diferentes métodos, o trabalho apresenta um comparativo sobre
+        as
+        taxas de erro dos algoritmos utilizados comparado com os valores reais dos imóveis.
+    </p>
+
+    <p class="docquote">Disponível <a href="https://arxiv.org/abs/1704.02965">aqui</a>.</p>
+
+    <h2>Considerações</h2>
+
+    <p>Apesar de considerar de suma importância, não acredito que dados objetivos apenas tragam valor científico às discussões. Nessa comparação, apresento trabalhos que mais utilizam taxas comparativas de erro sobre um <i>groundtruth</i>.</p>
+
+    <p>Em outros trabalhos é possível analisar outros aspectos tais como as métricas utilizadas em algoritmos de segmentação de imagens. Analisaremos esses aspectos em um próximo momento.</p>
+</div>

@@ -7,12 +7,12 @@ title: Blog
 <div id="main-div">
   <h1>Publicações</h1>
 
-    {% for page in site.pages %}
-    {% if page.categories contains "blog" %}
-    <div class="button" href="{{ page.url }}">
-      <img class="icon" src="../../icons/things/paper.png" />
-      <p>{{ page.title }}</p>
-    </div>
-    {% endif %}
-    {% endfor %}
+  {% for page in site.pages %}
+  {% if page.categories contains "blog" %}
+  <div class="button" href="{{ page.url }}">
+    <img class="icon" src="../../icons/things/paper.png" />
+    <p>{{ page.title }}</p>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>

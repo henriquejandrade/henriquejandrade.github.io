@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>{{ page.title }}</title>
+    <title>🧘‍♂️ YOGA</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <link rel='stylesheet' type='text/css' media='screen' href='../../style/screen.css'>
@@ -14,6 +14,12 @@
     <script src='../../scripts/screen.js'></script>
     <script src='../tv.js'></script>
     <script src='02.js'></script>
+
+    <!-- Processing -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script> -->
+    <!-- <script src="p5js/sketch.js"></script> -->
+    <!-- <script src="p5js/ball.js"></script> -->
 </head>
 
 <body>
@@ -25,15 +31,18 @@
         </div>
     </div>
 
+    <div id="sun"></div>
+    <div id="moon"></div>
+
     <div id="screen">
         <div id="content" class="page">
-            <canvas id="bgCanvas" width="256" height="192"></canvas>
+            <!-- <canvas id="bgCanvas" width="256" height="192"></canvas> -->
 
             <div id="content-overlay">
                 <div id="div-clock-container">
                     <div id="div-clock-inputs">
                         <p class="input-title">Duração dos Blocos (min)</p>
-                        <input id="block-time" type="number" min="15" max="120" step="1"
+                        <input id="block-time" type="number" min="10" max="120" step="1"
                             oninput="this.value = Math.min(Math.max(this.value, min), max)" value="45">
                         <p class="input-title">Tempo de Intervalo (min)</p>
                         <input id="interval-time" type="number" min="5" max="120" step="1"

@@ -2,19 +2,78 @@
     width: 100%;
 }
 
-#div-clock {
-    background: red;
+canvas {
+    z-index: 1;
+}
+
+#content-overlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#div-clock-container {
+    display: flex;
+    width: 100%;
     flex: 1;
+    flex-direction: column;
+}
+
+#div-clock-container #div-clock-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#div-clock-container .input-title {
+    font-size: 0.5em;
+}
+
+#div-clock-container input {
+    font-family: 'Retron2000';
+    text-align: center;
+    background: transparent;
+    border: 0;
+    border-bottom: solid 2px #000;
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+#div-clock-container input::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+#div-clock-container input:focus {
+    outline: none;
+}
+
+#div-clock-container #clock {
+    color: #888;
+    font-size: 2em;
+    text-shadow: 2px 2px #000000;
+}
+
+#div-clock-container #clock.interval {
+    color: #59ff6c;
+}
+
+#div-clock {
+    display: flex;
+    flex-direction: column;
+}
+
+#div-clock #clock-title {
+    color: #888;
+    text-shadow: 1px 1px #000000;
 }
 
 #div-control {
-    /* background: green; */
-    flex: 0.5;
-}
-
-#div-counter {
-    /* background: yellow; */
-    flex: 0.5;
+    width: 100%;
+    flex: 0.25;
 }
 
 #div-counter canvas {

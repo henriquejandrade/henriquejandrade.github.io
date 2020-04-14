@@ -1,0 +1,23 @@
+#content {
+    width: 100%;
+}
+
+#div-clock {
+    background: red;
+    flex: 1;
+}
+
+#div-control {
+    /* background: green; */
+    flex: 0.5;
+}
+
+#div-counter {
+    /* background: yellow; */
+    flex: 0.5;
+}
+
+#div-counter canvas {
+    width: 256px;
+    height: 48px;
+}

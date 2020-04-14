@@ -9,11 +9,11 @@
 
     <link rel='stylesheet' type='text/css' media='screen' href='../../style/screen.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../tv.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='01.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='02.css'>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src='../../scripts/screen.js'></script>
     <script src='../tv.js'></script>
-    <script src='01.js'></script>
+    <script src='02.js'></script>
 </head>
 
 <body>
@@ -26,9 +26,29 @@
     </div>
 
     <div id="screen">
-        <div id="content">
-            <canvas id="screen-canvas" width="256" height="192">
+        <div id="content" class="page">
+            <div id="div-clock">
+                <p id="clock">00:00</p>
+            </div>
+            <div id="div-control">
+
+                <div class="button" id="start" onclick="start()">
+                    <p>Iniciar</p>
+                </div>
+
+                <div class="button" id="pause" onclick="pause()">
+                    <p>Pausar</p>
+                </div>
+
+                <div class="button" id="stop" onclick="stop()">
+                    <p>Encerrar</p>
+                </div>
+            </div>
+            <div id="div-counter">
+                <canvas></canvas>
+            </div>
         </div>
+    </div>
     </div>
 
     <div id="div-transition">

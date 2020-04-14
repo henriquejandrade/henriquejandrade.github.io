@@ -1,0 +1,32 @@
+#dim-div {
+    opacity: 1;
+}
+
+#controls {
+    visibility: visible;
+    background-color: transparent;
+    clip-path: inset(0);
+}
+
+#controls .button {
+    background: #BBBBBB;
+    width: 50pt;
+    height: 50pt;
+    box-shadow: inset 0 -2pt 0 0pt #000;
+}
+
+#controls .button:hover {
+    background: #FFFFFF;
+    box-shadow: inset 0 2pt 0 0pt #000;
+}
+
+#controls .button img {
+    display: flex;
+    width: 45pt;
+    height: 45pt;
+    margin: 0 auto;
+}
+
+#controls .button img:hover {
+    padding-top: 2pt;
+}

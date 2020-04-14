@@ -10,6 +10,8 @@ var timeCount = 0;
 var isRunning = false;
 var isInterval = false;
 
+var blip;
+
 $(document).ready(function () {
     timeCount = 0;
 
@@ -22,6 +24,9 @@ $(document).ready(function () {
     $('#div-clock').hide();
 
     initCanvas();
+
+    blip = new Audio('blip.wav');
+    blip.volume = 0.25;
 });
 
 function tick() {
@@ -40,6 +45,9 @@ function tick() {
 
             // Animate background new box
             drawBox();
+
+            // Play sound feedback
+            blip.play();
         }
     } else {
         if (timeCount >= totalTime) {
@@ -52,6 +60,14 @@ function tick() {
 
             // Animate interval hide title
             hideIntervalTitle();
+
+            // Play sound feedback
+            blip.addEventListener('ended', function playEnded(){
+                blip.removeEventListener('ended', playEnded, false);
+                blip.play();
+            });
+            
+            blip.play();
         }
     }
 

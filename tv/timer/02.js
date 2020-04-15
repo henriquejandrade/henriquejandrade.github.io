@@ -91,6 +91,14 @@ function start() {
         $('#div-clock-inputs').hide();
         $('#div-clock').show();
         $('#div-clock #clock-title').text('');
+
+        // Play sound feedback
+        blip.addEventListener('ended', function playEnded() {
+            blip.removeEventListener('ended', playEnded, false);
+            blip.play();
+        });
+
+        blip.play();
     } else {
         $('.button#pause').show();
         $('.button#start').hide();
@@ -179,7 +187,7 @@ function initBgAnimation() {
     domBody.css('background-image', 'url()');
     refreshBackground();
     bgAnimTimer = window.setInterval(refreshBackground, 10000);
-    
+
     // Turns dim off
     $("#dim-div").animate({
         opacity: 0

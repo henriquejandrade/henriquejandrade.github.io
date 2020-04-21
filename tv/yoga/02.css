@@ -13,7 +13,6 @@ canvas {
 
 #screen {
     background: transparent;
-    z-index: 2;
 }
 
 #content-overlay {
@@ -98,32 +97,4 @@ canvas {
 #div-counter canvas {
     width: 256px;
     height: 48px;
-}
-
-/* Day/Night Styles */
-
-#dim-div{
-    z-index: 1;
-}
-
-#sun {
-    position: absolute;
-    background: lightyellow;
-    box-shadow: 0 0 100pt #fff;
-    width: 100pt;
-    height: 100pt;
-    bottom: 10%;
-    left: 10%;
-    z-index: 0;
-}
-
-#moon {
-    position: absolute;
-    background: #AAAAAA;
-    box-shadow: 0 0 20pt #fff, inset 5pt -5pt 0 #222;
-    width: 25pt;
-    height: 25pt;
-    bottom: 5%;
-    right: 10%;
-    z-index: 0;
 }

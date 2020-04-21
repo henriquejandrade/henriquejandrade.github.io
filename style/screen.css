@@ -47,7 +47,7 @@ p {
 }
 
 #screen {
-    position: relative;
+    position: absolute;
     width: 256px;
     height: 192px;
     background: white;

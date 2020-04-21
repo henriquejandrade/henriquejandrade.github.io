@@ -35,8 +35,17 @@ canvas {
 }
 
 #div-clock-container #div-clock-inputs {
-    display: flex;
+    background: #BBBBBB;
+    width: 200px;
     flex-direction: column;
+    margin: 5px;
+    outline: none;
+    box-shadow: inset 0 -2pt 0 0pt #000;
+}
+
+#div-clock-container #app-title {
+    font-size: 0.75em;
+    margin-bottom: 15px;
 }
 
 #div-clock-container .input-title {

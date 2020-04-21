@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104686652-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-104686652-1');
+    </script>
+
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>🧘‍♂️ YOGA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="hnrqndrd.com">
+    <meta name="twitter:creator" content="@rickhenrique">
+    <meta name="twitter:title" content="🧘‍♂️ YOGA">
+    <meta name="twitter:description" content="Contador de tempo por blocos">
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../../style/screen.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src='../../scripts/screen.js'></script>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='../tv.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='02.css'>
+    <script src='../tv.js'></script>
+    <script src='02.js'></script>
+
+    <!-- Processing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="p5js/color.js"></script>
+    <script src="p5js/sketch.js"></script>
+    <script src="p5js/ball.js"></script>
+</head>
+
+<body>
+    <div id="dim-div"></div>
+
+    <div id="controls">
+        <div class="button" href="../../">
+            <img src="../../icons/symbols/arrow_left.png" />
+        </div>
+    </div>
+
+    <div id="sun"></div>
+    <div id="moon"></div>
+
+    <div id="screen">
+        <canvas id="bgCanvas" width="256" height="192"></canvas>
+
+        <div id="content" class="page">
+            <div id="content-overlay">
+                <div id="div-clock-container">
+                    <div id="div-clock-inputs">
+                        <p class="input-title">Duração dos Blocos (min)</p>
+                        <input id="block-time" type="number" min="10" max="120" step="1"
+                            oninput="this.value = Math.min(Math.max(this.value, min), max)" value="45">
+                        <p class="input-title">Tempo de Intervalo (min)</p>
+                        <input id="interval-time" type="number" min="5" max="120" step="1"
+                            oninput="this.value = Math.min(Math.max(this.value, min), max)" value="15" />
+                    </div>
+                    <div id="div-clock">
+                        <p id="clock-title">Interval</p>
+                        <p id="clock">00:00</p>
+                    </div>
+                </div>
+
+                <div id="div-control">
+                    <div class="button" id="start" onclick="start()">
+                        <p>Iniciar</p>
+                    </div>
+
+                    <div class="button" id="pause" onclick="pause()">
+                        <p>Pausar</p>
+                    </div>
+
+                    <div class="button" id="stop" onclick="stop()">
+                        <p>Encerrar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="div-transition">
+        <div id="top-div"></div>
+    </div>
+</body>
+
+</html>

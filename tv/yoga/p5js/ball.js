@@ -1,14 +1,13 @@
 class Ball {
 
-    constructor(x, y, size) {
-        this.x = x;
-        this.y = y;
+    constructor(size, color) {
         this.size = size;
+        this.color = color;
     }
 
-    draw() {
+    draw(x, y) {
         noStroke();
-        fill(255, 0, 0);
-        circle(this.x, this.y, this.size);
+        this.color.myFill();
+        circle(x, y, this.size);
     }
 }

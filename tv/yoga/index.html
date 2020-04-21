@@ -34,10 +34,11 @@
     <script src='02.js'></script>
 
     <!-- Processing -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script> -->
-    <!-- <script src="p5js/sketch.js"></script> -->
-    <!-- <script src="p5js/ball.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="p5js/color.js"></script>
+    <script src="p5js/sketch.js"></script>
+    <script src="p5js/ball.js"></script>
 </head>
 
 <body>
@@ -53,12 +54,13 @@
     <div id="moon"></div>
 
     <div id="screen">
-        <div id="content" class="page">
-            <!-- <canvas id="bgCanvas" width="256" height="192"></canvas> -->
+        <canvas id="bgCanvas" width="256" height="192"></canvas>
 
+        <div id="content" class="page">
             <div id="content-overlay">
                 <div id="div-clock-container">
                     <div id="div-clock-inputs">
+                        <p id="app-title">Temporizador de Foco</p>
                         <p class="input-title">Duração dos Blocos (min)</p>
                         <input id="block-time" type="number" min="10" max="120" step="1"
                             oninput="this.value = Math.min(Math.max(this.value, min), max)" value="45">

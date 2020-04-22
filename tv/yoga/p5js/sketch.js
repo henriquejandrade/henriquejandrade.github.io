@@ -91,8 +91,8 @@ function draw() {
     sun.draw(256 / 4, myLerp(192 * 3 / 2, -192 / 2, nowSeconds / 86400));
     moon.draw(3 * 256 / 4, moonPosition);
 
-    building1.draw();
-    building2.draw();
+    //building1.draw();
+    //building2.draw();
 
     image(cityImg, 0, 0);
 }

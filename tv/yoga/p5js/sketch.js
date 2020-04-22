@@ -2,6 +2,9 @@ let cityImg;
 let sun;
 let moon;
 
+var building1;
+var building2;
+
 var colorMidnight = [10, 0, 83];
 var colorMorning = [115, 185, 255];
 var colorAfternoon = [77, 122, 255];
@@ -11,9 +14,12 @@ var colorLate = [26, 0, 102];
 function setup() {
     let canvas = createCanvas(256, 192);
     canvas.id('bgCanvas');
-    canvas.parent('content');
+    canvas.parent('screen');
 
     cityImg = loadImage('res/bg2.png');
+
+    building1 = new Building(30, 192);
+    building2 = new Building(190, 192);
 
     sun = new Ball(45, new Color(255, 255, 191));
     moon = new Ball(10, new Color(206, 206, 191));
@@ -58,7 +64,13 @@ function myLerp(start, end, amt) {
     return (1 - amt) * start + amt * end;
 }
 
+function update() {
+    building1.update();
+    building2.update();
+}
+
 function draw() {
+    update();
 
     var now = new Date();
     var nowSeconds = now.getHours() * 60 * 60 +
@@ -78,6 +90,9 @@ function draw() {
 
     sun.draw(256 / 4, myLerp(192 * 3 / 2, -192 / 2, nowSeconds / 86400));
     moon.draw(3 * 256 / 4, moonPosition);
+
+    building1.draw();
+    building2.draw();
 
     image(cityImg, 0, 0);
 }

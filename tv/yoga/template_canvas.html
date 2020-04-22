@@ -52,41 +52,7 @@
     </div>
 
     <div id="screen">
-        <canvas id="bgCanvas" width="256" height="192"></canvas>
-
-        <div id="content" class="page">
-            <div id="content-overlay">
-                <div id="div-clock-container">
-                    <div id="div-clock-inputs">
-                        <p id="app-title">Temporizador de Foco</p>
-                        <p class="input-title">Duração dos Blocos (min)</p>
-                        <input id="block-time" type="number" min="10" max="120" step="1"
-                            oninput="this.value = Math.min(Math.max(this.value, min), max)" value="45">
-                        <p class="input-title">Tempo de Intervalo (min)</p>
-                        <input id="interval-time" type="number" min="5" max="120" step="1"
-                            oninput="this.value = Math.min(Math.max(this.value, min), max)" value="15" />
-                    </div>
-                    <div id="div-clock">
-                        <p id="clock-title">Interval</p>
-                        <p id="clock">00:00</p>
-                    </div>
-                </div>
-
-                <div id="div-control">
-                    <div class="button" id="start" onclick="start()">
-                        <p>Iniciar</p>
-                    </div>
-
-                    <div class="button" id="pause" onclick="pause()">
-                        <p>Pausar</p>
-                    </div>
-
-                    <div class="button" id="stop" onclick="stop()">
-                        <p>Encerrar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </div>
     </div>
 

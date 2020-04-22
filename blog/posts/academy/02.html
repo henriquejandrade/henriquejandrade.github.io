@@ -1,0 +1,106 @@
+---
+layout: blog
+parent: ../..
+title: Medindo Mapas 2
+metatitle: 🎓 Medindo Mapas 2
+description: "Levantamento de métricas em trabalhos de segmentação de imagens urbanas que analisam, por exemplo, taxas de acurácia e precisão."
+date: 04/22/2020
+---
+
+
+<div id="main-div">
+    <h1>Medindo Mapas 2</h1>
+
+    <p>
+        Essa semana revisei alguns trabalhos focados em segmentação e classificação que pareceram muito mais
+        interessantes
+        do que os da semana passada. Todos se baseavam em técnicas diferentes de segmentação, modos já classicos de
+        classificação e métricas comuns entre eles.
+    </p>
+
+    <h3>
+        Métricas Observadas
+    </h3>
+
+    <p>
+        Os trabalhos apresentaram valores de acurácia, precisão das áreas identificadas, matrizes de confusão e
+        coeficientes
+        kappa. Vou visitar cada um dos três trabalhos analisados para descriminar suas características.
+    </p>
+
+    <h1><i>Slum Segmentation and Change Detection: A Deep Learning Approach</i></h1>
+
+    <p>
+        Trabalho indiano que realizou a classificação de imagens de satélite da cidade de Mumbai em duas janelas de
+        tempo
+        diferentes. O trabalho após classificação, realizou união dos resultados subtraído da interseção, identificando
+        as
+        mudanças, o crescimento da área de ocupação das favelas da cidade.
+    </p>
+
+    <p>
+        As imagens foram extraídas do Google Earth e os resultados anotados sobre dados do <i>
+            Slum Rehabilitation Authority of
+            Mumbai
+        </i> (SRA), que demarca os espaços de ocupação da cidade indiana.
+    </p>
+
+    <p>
+        Em específico, o trabalho realizou cálculo da <i>intersection over time</i>, ou seja, a área de interseção
+        dividida pela
+        área da união, e também a precisão média.
+    </p>
+
+    <p>
+        O trabalho pode ser encontrado <a href="https://arxiv.org/abs/1811.07896">aqui</a>.
+    </p>
+
+    <h1><i>Using Convolutional Networks and Satellite Imagery to Identify Patterns in Urban Environments at a Large
+            Scale</i></h1>
+
+    <p>
+        Esse trabalho utiliza como <i>groundtruth</i> um trabalho que cataloga toda a ocupação das cidades europeias, o
+        <a href="https://land.copernicus.eu/local/urban-atlas"><i>Urban Atlas</i></a>.
+    </p>
+
+    <p>
+        Assim, o trabalho classifica rótulos como corpos de água, florestas, áreas industriais, residenciais, comerciais
+        e
+        seus níveis de intensidade, além de equipamentos urbanos de lazer, esporte e prédios públicos.
+    </p>
+
+    <p>
+        O trabalho pode ser encontrado <a href="https://arxiv.org/abs/1704.02965">aqui</a>.
+    </p>
+
+    <h1><i>Urban land-use mapping using a deep convolutional neural network with high spatial resolution multispectral
+            remote sensing imagery</i></h1>
+
+    <p>
+        Esse trabalho de Hong Kong utiliza imagens de satélites comerciais de caráter fechado, ou seja, apenas
+        disponíveis
+        pagando seu acesso, para também classificar a ocupação das áreas urbanas assim como o trabalho anterior,
+        rotulando
+        espaços como áreas industriais, residenciais, comerciais, espaços vagos, armazéns, estradas, entre outros.
+    </p>
+
+    <p>
+        O trabalho analisa os espaços de Hong Kong e cidades vizinhas da região metropolitana. As métricas analisadas
+        foram
+        as mais vastas dos trabalhos dessa revisão: a acurácia, matrizes de confusão e coeficientes kappa.
+    </p>
+
+    <P>
+        Esse trabalho apresenta também uma forma de segmentação que, além da divisão quadrática clássica, leva em
+        consideração as vias viárias, quebrando a cidade em recortes disformes que terão sua área interna generalizada.
+        O
+        trabalho conclui que essa segmentação se apresenta muito mais fidedigna do que a que leva em considerações
+        coordenadas, decisões censuais ou a decisão do programador que implementa a segmentação.
+    </P>
+
+    <p>
+        O trabalho é apenas vendido, ao menos enquanto produzo esse texto, e pode ser encontrado <a
+            href="https://www.researchgate.net/publication/325283631_Urban_land-use_mapping_using_a_deep_convolutional_neural_network_with_high_spatial_resolution_multispectral_remote_sensing_imagery">aqui</a>.
+        Apesar disso, entrei em contato com os autores e eles me disponibilizaram o acesso.
+    </p>
+</div>

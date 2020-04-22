@@ -11,6 +11,10 @@ var colorAfternoon = [77, 122, 255];
 var colorNight = [0, 0, 64];
 var colorLate = [26, 0, 102];
 
+var nowSeconds = 0;
+var refSeconds = 0;
+var turnSeconds = 0;
+
 function setup() {
     let canvas = createCanvas(256, 192);
     canvas.id('bgCanvas');
@@ -26,12 +30,8 @@ function setup() {
 }
 
 function drawBackground() {
+    
     // Draw sky
-    var now = new Date();
-    var nowSeconds = now.getHours() * 60 * 60 +
-        now.getMinutes() * 60 +
-        now.getSeconds();
-
     var borderColorA;
     var borderColorB;
 
@@ -39,23 +39,38 @@ function drawBackground() {
     if (nowSeconds < 10800) {
         borderColorA = colorMidnight;
         borderColorB = colorLate;
+
+        refSeconds = nowSeconds;
+        turnSeconds = 10800;
     } else if (nowSeconds < 32400) {
         borderColorA = colorLate;
         borderColorB = colorMorning;
+
+        refSeconds = nowSeconds - 10800;
+        turnSeconds = 21600;
     } else if (nowSeconds < 54000) {
         borderColorA = colorMorning;
         borderColorB = colorAfternoon;
+
+        refSeconds = nowSeconds - 32400;
+        turnSeconds = 21600;
     } else if (nowSeconds < 75600) {
         borderColorA = colorAfternoon;
         borderColorB = colorNight;
+
+        refSeconds = nowSeconds - 54000;
+        turnSeconds = 21600;
     } else {
         borderColorA = colorNight;
         borderColorB = colorMidnight;
+
+        refSeconds = nowSeconds - 75600;
+        turnSeconds = 10800;
     }
 
-    var dimColor = [myLerp(borderColorA[0], borderColorB[0], nowSeconds / 86400),
-    myLerp(borderColorA[1], borderColorB[1], nowSeconds / 86400),
-    myLerp(borderColorA[2], borderColorB[2], nowSeconds / 86400)];
+    var dimColor = [myLerp(borderColorA[0], borderColorB[0], refSeconds / turnSeconds),
+    myLerp(borderColorA[1], borderColorB[1], refSeconds / turnSeconds),
+    myLerp(borderColorA[2], borderColorB[2], refSeconds / turnSeconds)];
 
     background(dimColor[0], dimColor[1], dimColor[2]);
 }
@@ -73,7 +88,7 @@ function draw() {
     update();
 
     var now = new Date();
-    var nowSeconds = now.getHours() * 60 * 60 +
+    nowSeconds = now.getHours() * 60 * 60 +
         now.getMinutes() * 60 +
         now.getSeconds();
 

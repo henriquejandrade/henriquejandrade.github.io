@@ -26,7 +26,7 @@ cover-image: https://www.hnrqndrd.com/recife/images/cover.jpg
   <div class="button thumbnail" href="{{ page.url }}">
     <img src="{{page.cover-image}}" />
     <p class="posttitle">{{ page.title }}</p>
-    <p class="postsubtitle">{{ page.date }}</p>
+    <p class="postsubtitle">{{ page.date | date: "%d/%m/%Y" }}</p>
   </div>
   {% endif %}
   {% endfor %}

@@ -1,33 +1,148 @@
----
-layout: default
-parent: ../..
-title: História do Povo do Recife
-metatitle: 🦀 História do Povo do Recife
-description: Reflexões sobre a história popular do Recife.
-cover-image: https://www.hnrqndrd.com/recife/images/cover.jpg
----
+<!DOCTYPE html>
+<html>
 
-<div id="main-div">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104686652-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  <!-- Image -->
-  <img class="illustration" src="../images/cover.jpg" />
-  <p class="subtitle">
-  </p>
+    gtag('config', 'UA-104686652-1');
+  </script>
 
-  <p>Oi! Aqui eu reuno textos refletidos a partir das pesquisas realizadas no mapeamento da evolução urbana do Recife.
-    Terminei levantando muitas considerações sobre a história da cidade onde cresci e resolvi compartilhá-las! Se quiser
-    falar comigo, dá um oi lá no <a href="http://twitter.com/rickhenrique">Twitter</a>!
-  </p>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <h3>Textos</h3>
+  <title>{{ page.title }}</title>
 
-  {% for page in site.pages reversed %}
-  {% if page.categories contains "historia" and page.categories contains "recife" %}
-  <div class="button thumbnail" href="{{ page.url }}">
-    <img src="{{page.cover-image}}" />
-    <p class="posttitle">{{ page.title }}</p>
-    <p class="postsubtitle">{{ page.date | date: "%d/%m/%Y" }}</p>
+  <meta name="description" content="{{page.description}}" />
+  <meta name="theme-color" content="#EEEEEE" />
+  <meta property="og:title" content="{{page.metatitle}}" />
+  <meta property="og:image" content="{{page.cover-image}}" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="hnrqndrd.com">
+  <meta name="twitter:creator" content="@rickhenrique">
+  <meta name="twitter:title" content="{{ page.metatitle }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ page.cover-image }}">
+
+  <link href="https://www.hnrqndrd.com/style/blog.css" rel="stylesheet">
+  <link href="https://www.hnrqndrd.com/style/pages.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One|Noto+Sans+HK&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Patua+One&family=Ubuntu&display=swap"
+    rel="stylesheet">
+  <link href="https://www.hnrqndrd.com/style/markdown.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://www.hnrqndrd.com/scripts/pages.js"></script>
+</head>
+
+<style>
+  #blinky {
+    animation: bounce .3s ease infinite alternate;
+    -webkit-animation: bounce .3s ease infinite alternate;
+  }
+
+  @keyframes bounce {
+    100% {
+      color: #BBBBBB;
+    }
+  }
+</style>
+
+<body>
+  <div id="top-bar">
+    <div id="icon-top-bar" class="nav-button">
+      <img id="icon-img-top-bar" class="icon clickable" href="{{ page.parent }}"
+        src="https://www.hnrqndrd.com/icons/symbols/arrow_left.png" />
+    </div>
+    <div id="top-bar-title">
+      <p>{{ page.title }}</p>
+    </div>
   </div>
-  {% endif %}
-  {% endfor %}
-</div>
+  <div id="page-content">
+    <div id="main-div">
+
+      <h3>Introdução antes da vinheta</h3>
+
+      <p>
+        Oi gente, que honra estar de volta. 👸 E que honra saber que o conteúdo dos textos é de interesse de muita gente! Eu não poderia ficar mais feliz. Espero estar conseguindo provocar curiosidade (e indignação, às vezes)
+        em
+        todo mundo, é meu objetivo aqui. Se você estiver lendo esse texto pra trabalho de escola, <b>não</b> coloque
+        esse
+        parágrafo. Copie a partir de mais de baixo.
+      </p>
+
+      <p>
+        Estou de casa nova! Decidi me mudar, em resumo, porque aqui não dependo de propaganda do Medium e os leitores
+        podem perambular pelos textos sem estar limitados a um número finito de leituras. Fiquem à vontade, escrevo isso
+        para vocês. Me mudei também porque aqui... <span id="blinky">eu posso fazer o que quiser</span>.
+      </p>
+
+      <!-- Image -->
+
+      <!-- história da indústria do açúcar em pernambuco -->
+      <p>
+        Nesse texto, vou trazer a história de um doce muuuito popular nas nossas casas pernambucanas, conhecido por ser original dessa terra (ah, e gostoso também). Não vou desapontar ninguém, o doce é pernambucano mesmo. E nesse embalo de nostalgia gostosa, desse carinho açucarado e enrolado, desse amor goiabento, pegajoso e muitas vezes polêmico de defender absolutamente qualquer coisa que apareça na praça do Derby, do lanche no precinho à sala de exibição de filme iraniano, eu vos apresento a...
+      </p>
+      
+      <p class='title'>🦀 História do Bolo de Rolo</p>
+
+      revisão do que já aconteceu historicamente até esse momento histórico do texto
+
+      resumo da história da indústria do açúcar na europa
+
+      situar historicamente POR QUE pernambuco se tornou uma linha de produção do açúcar para agradar os europeus
+
+      tomada das várzeas do capibaribe
+
+      miscigenação e criação de uma elite local (franz obermeier, manuel de nóbrega)
+
+      ate agora doce não é uma coisa muito popular
+
+      estabelecimento de engenhos de açúcar
+
+      partir do produto para descrever seus produtores
+
+      o caminho do bolo, do pão de ló
+
+      configuração dos engenhos da várzea do capibaribe
+
+      o açúcar passando de mão em mão
+
+      a goiaba, o araçá as amêndoas (myrtaceas, psidium) (araça-iba)
+
+      os negros da cozinha
+
+      os gostos portugueses
+
+      o bolo de rolo patrimônio
+
+      gancho para enriquecimento desenfreado e pouco protegido, alvo bom para piratas
+
+      gancho para o início do tráfico negro em recife
+
+      isso aqui não é um texto carinhoso, é um capítulo da história do recife
+      isso aqui ainda é um blog da história do povo
+
+      receita de bolo de rolo
+
+      refs
+      https://issuu.com/revistacontinente/docs/090_-_jun_08_-_bolo_de_rolo
+      Casa grande e senzala 462
+      https://www.youtube.com/watch?v=3Trpu7e0iiE
+
+      brincar com a ref cruzada
+      https://pt.wikipedia.org/wiki/Bolo_de_rolo#Hist%C3%B3ria
+      http://basilio.fundaj.gov.br/pesquisaescolar/index.php?option=com_content&view=article&id=468&Itemid=181
+    </div>
+  </div>
+</body>
+
+</html>

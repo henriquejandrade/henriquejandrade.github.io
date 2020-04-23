@@ -93,14 +93,15 @@ hr {
 }
 
 .button.thumbnail .posttitle {
-    line-height: 30pt;
+    line-height: 40pt;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .button.thumbnail .postsubtitle {
-    line-height: 20pt;
+    font-size: 0.5em;
+    line-height: 10pt;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;

@@ -21,8 +21,7 @@ cover-image: https://www.hnrqndrd.com/recife/images/cover.jpg
 
   <h3>Textos</h3>
 
-  {% assign ordered_pages = site.pages | sort:"date" %}
-  {% for page in ordered_pages %}
+  {% for page in site.pages reversed %}
   {% if page.categories contains "historia" and page.categories contains "recife" %}
   <div class="button thumbnail" href="{{ page.url }}">
     <img src="{{page.cover-image}}" />

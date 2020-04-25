@@ -154,20 +154,6 @@ img.illustration {
     border-radius: 15pt;
     width: 100%;
 }
-img.illustration.align-right {
-    float: right;
-    width: auto;
-    margin-left: 15pt;
-    margin-bottom: 15pt;
-}
-
-@media screen and (max-width: 800px) {
-    img.illustration.align-right {
-        display: block;
-        float: none;
-        margin: 0 auto;
-    }
-}
 
 img.full-illustration {
     border-radius: 0pt;
@@ -186,6 +172,21 @@ img.illustration.clickable, img.full-illustration.clickable {
 img.illustration.clickable:hover, img.full-illustration.clickable:hover {
     border-width: 4pt;
     cursor: pointer;
+}
+
+.illustration-align-right {
+    float: right;
+    width: 50%;
+    margin-left: 15pt;
+    margin-bottom: 15pt;
+}
+
+@media screen and (max-width: 800px) {
+    .illustration-align-right {
+        display: block;
+        float: none;
+        margin: 0 auto;
+    }
 }
 
 .full-embed-map {

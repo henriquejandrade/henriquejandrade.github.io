@@ -78,6 +78,9 @@ hr {
     color: #000000;
     padding: 0 15pt;
     margin: auto 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .button.thumbnail {
@@ -177,6 +180,7 @@ img.illustration.clickable:hover, img.full-illustration.clickable:hover {
 .illustration-align-right {
     float: right;
     width: 50%;
+    margin-top: 25pt;
     margin-left: 15pt;
     margin-bottom: 15pt;
 }
@@ -184,8 +188,10 @@ img.illustration.clickable:hover, img.full-illustration.clickable:hover {
 @media screen and (max-width: 800px) {
     .illustration-align-right {
         display: block;
+        width: 100%;
         float: none;
         margin: 0 auto;
+        margin-top: 25pt;
     }
 }
 

@@ -149,6 +149,7 @@ p.docquote {
 }
 
 img.icon {
+    display: block;
     width: 50pt;
     height: 50pt;
 }

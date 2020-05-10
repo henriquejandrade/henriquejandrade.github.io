@@ -1,0 +1,228 @@
+<!--
+---
+layout: blog
+parent: ../..
+title: 
+metatitle: 🎓 
+categories: 
+description: ""
+keywords: 
+date: 
+---
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104686652-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-104686652-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ page.title }}</title>
+
+    <meta name="description" content="{{page.description}}" />
+    <meta name="theme-color" content="#EEEEEE" />
+    <meta property="og:title" content="{{page.metatitle}}" />
+    <meta property="og:image" content="{{page.cover-image}}" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="hnrqndrd.com">
+    <meta name="twitter:creator" content="@rickhenrique">
+    <meta name="twitter:title" content="{{ page.metatitle }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="twitter:image" content="{{ page.cover-image }}">
+
+    <link href="../../../style/blog.css" rel="stylesheet">
+    <link href="../../../style/pages.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Patua+One&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link href="https://www.hnrqndrd.com/style/markdown.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://www.hnrqndrd.com/scripts/pages.js"></script>
+</head>
+
+
+<body>
+    <div id="top-bar">
+        <div id="icon-top-bar" class="nav-button">
+            <img id="icon-img-top-bar" class="icon clickable" href="{{ page.parent }}"
+                src="https://www.hnrqndrd.com/icons/symbols/arrow_left.png" />
+        </div>
+        <div id="top-bar-title">
+            <p>{{ page.title }}</p>
+        </div>
+    </div>
+    <div id="page-content">
+
+        <div id="main-div">
+            <h1>
+                <i>pix2pix</i>
+            </h1>
+
+            <p>
+                Oi gente, aqui inicio minha primeira postagem-análise de um artigo. Escrevo sobre o *pix2pix*, um
+                trabalho
+                <a href="https://twitter.com/hashtag/pix2pix">abraçado pela comunidade artística experimental</a> por
+                ser um gerador de
+                imagens a partir de uma entrada visual (ou seja, uma imagem).
+            </p>
+
+            <img src="https://phillipi.github.io/pix2pix/images/edges2cats.jpg" />
+
+            <p>
+                A ferramenta tem seu método descrito no artigo <i>
+                    Image-to-Image Translation with Conditional Adversarial
+                    Nets
+                </i>, um trabalho apresentado na conferência <i>Computer Vision and Pattern Recognition</i>, no Havaí em
+                2017.
+            </p>
+
+            <hr />
+
+            <h2>
+                A Ideia
+            </h2>
+
+            <p>
+                A ideia dos autores do sistema é a concepção de uma ferramenta para tradução entre imagens. Eles apontam
+                que
+                já existem sistemas para essa finalidade, mas que são modelos diferentes para cara um desses fins.
+                Portanto,
+                o trabalho convém uma <b>rede de geração adversária condicional</b> (cGAN), adaptável a diferentes
+                problemas
+                "imagem-para-imagem".
+            </p>
+
+            <img src="https://phillipi.github.io/pix2pix/images/teaser_v3.jpg" alt="">
+
+            <hr />
+
+            <h2>
+                Rede de Geração Adversária (GAN)
+            </h2>
+
+            <p>
+                Na sua proposição clássica, a GAN reproduz uma disputa entre duas redes, a rede <b>geradora</b> <span
+                    class="code">G</span> e a <b>discriminadora</b> <span class="code">D</span>, a que vai verificar a
+                saída da primeira rede. As regras gerais da disputa são:
+            </p>
+            <ul>
+                <li>
+                    A rede geradora recebe como entrada um vetor de ruído <span class="code">z</span> e tem como saída
+                    uma imagem <span class="code">y</span>;
+                </li>
+
+                <li>
+                    A rede discriminadora, a que julga, recebe como entrada uma imagem <span class="code">x</span> e a
+                    imagem <span class="code">y</span>, saída da rede geradora;
+                </li>
+
+                <li>
+                    A rede discriminadora determina se a saída de <span class="code">y</span> é parte do
+                    <i>groundtruth</i> com <span class="code">x</span>, ou seja, se <span class="code">y</span> é
+                    uma imagem real ou se ela é falsa;
+                </li>
+
+                <li>
+                    O objetivo de <span class="code">D</span> é minimizar seu erro, enquanto o objetivo de <span
+                        class="code">G</span> é maximizar o erro de <span class="code">D</span>.
+                </li>
+            </ul>
+
+            <p>
+                Dessa forma, idealmente, evoluimos duas redes, uma especialista em discernir se uma imagem foi gerada
+                artificialmente a partir do vetor <span class="code">z</span> e uma rede especialista em gerar imagens
+                que enganam a primeira rede.
+                Estendendo a definição a seu limite, teremos uma rede <span class="code">G</span> que gera imagens tão
+                convincentes que a rede <span class="code">D</span>
+                sempre retornará <span class="code">0.5</span>, que se interpretaria como "pode ser real ou não".
+            </p>
+
+            <h2>
+                cGAN, sua versão condicional
+            </h2>
+
+            <p>
+                Uma adaptação da rede de geração adversária leva em consideração uma imagem <span class="code">x</span>
+                como entrada da rede geradora <span class="code">G</span>. Dessa forma, concebe-se uma rede que realiza
+                uma operação de imagem para imagem. Assim como a
+                GAN, a rede <span class="code">G</span> tenta diminuir o objetivo de <span class="code">D</span> e,
+                por sua vez, <span class="code">D</span> tenta aumentar seu próprio objetivo.
+            </p>
+
+            <p>
+                São as regras da cGAN:
+            </p>
+
+            <ol>
+                <li><span class="code">G</span> recebe uma imagem <span class="code">x</span> e um vetor de ruído <span
+                        class="code">z</span> como entradas;</li>
+
+                <li><span class="code">D</span>, por sua vez, recebe uma imagem <span class="code">x</span> e a saída de
+                    <span class="code">G</span>;</li>
+
+                <li>A função <i>loss</i> calcula o inverso desse objetivo, na tentativa de minimizá-lo;</li>
+
+                <li><span class="code">D</span> avalia seu resultado tendo como entradas as imagens <span
+                        class="code">x</span> e <span class="code">y</span>;</li>
+            </ol>
+
+            <p>
+                Para isso, temos que <i>loss</i> de cGAN é:
+            </p>
+
+            <p class="code-block">
+                LcGAN = Ex,y[log D(x, y)] + Ex,y[log (1 - D(x, G(x, z)))]
+            </p>
+
+            <p>Para forçar as saídas do gerador a resultados mais próximos do <i>ground truth</i>, o autor sugere
+                acrescentar uma outra função objetivo <span class="code">L1</span>, que em comparação com <span
+                    class="code">L2</span> gera menos <i>blur</i>:</p>
+
+            <p class="code-block">
+                LL1 = Ex,y,z[|y - G(x, z)|]
+            </p>
+
+            <p>Portanto, a função objetivo final se torna:</p>
+
+            <p class="code-block">
+                G* = arg min max LcGAN(G, D) + λ LL1(G)
+            </p>
+
+            <hr />
+
+            <h2>As arquiteturas em disputa</h2>
+
+            <p>Para a rede geradora, o autor adota uma arquitetura <b>U-Net</b> e para a rede discriminadora, uma
+                arquitetura PatchGAN.</p>
+
+            <!-- Image -->
+            <img class="illustration" src="images/03/unet.png" />
+            <p class="subtitle">U-Net é uma arquitetura <i>encoder-decoder</i> com conexões que passam direto entre
+                camadas.</p>
+
+            <h2>Resultados</h2>
+
+            <!-- Image -->
+            <img class="illustration" src="images/03/results.jpg" />
+            <p class="subtitle">O uso de diferentes funções objetivo levam a qualidades diferentes de imagens</p>
+        </div>
+    </div>
+</body>
+
+</html>

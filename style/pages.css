@@ -205,3 +205,18 @@ img.illustration.clickable:hover, img.full-illustration.clickable:hover {
     width: 100%;
     margin: 0 auto;
 }
+
+.code {
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #0040d4;
+}
+
+.code-block {
+    font-family: monospace;
+    font-size: 0.8em;
+    letter-spacing: -0.05em;
+    line-height: 1.5em;
+    padding-left: 15pt;
+    border-left: 2px solid #222222;
+}

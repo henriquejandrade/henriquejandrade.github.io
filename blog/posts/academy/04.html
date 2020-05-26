@@ -1,0 +1,162 @@
+---
+layout: blog
+parent: ../..
+title: 💻 Experimentos com cGAN
+categories: blog, academy
+description: "Blog de desenvoldimento para o mestrado"
+keywords: deep learning, pix2pix, recife, machine learning, cgan, tradução de mapas
+date: 05/25/2020
+---
+
+<div id="main-div">
+    <p class="title">
+        💻 Experimentos com cGAN
+    </p>
+
+    <p>
+        Essa semana, testei a sugestão do meu professor, traduzir imagens do Recife de 2010 a 2015 usando o algoritmo
+        <i>pix2pix</i>. Na hora de organizar os arquivos para treino e teste, acabei invertendo os conjuntos de imagem e
+        testei a rede para traduzir 2015 em 2010. A implementação do algoritmo é essa disponível <a
+            href="https://phillipi.github.io/pix2pix/">aqui</a>. Para esse treinamento, 150 iterações foram executadas.
+        Seguem os resultados:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/01.jpg" />
+    <p class="subtitle">As colunas da esquerda para a direita: imagem em 2010, imagem em 2015 e a previsão da rede.</p>
+
+    <h3>Representação comum</h3>
+
+    <p>
+        Depois de analisar os resultados da tradução de imagem para imagem, percebi que a arquitetura da rede não é
+        exatamente ideal para reproduzir a estrutura de uma imagem é outra. A arquitetura consegue copiar o estilo e
+        iluminação bem de uma imagem para outra, a rede também manipula texturas bem. Já a reprodução de disposição de
+        elementos, eliminação ou adição, quando a alimentamos com imagens no mesmo domínio do resultado esperado,
+        torna-se difícil.
+    </p>
+
+    <p>
+        Os exemplos do artigo são claros: ou reproduzem mudanças de textura e forma, ou traduzem <b>rótulos</b>.
+        Observando isso e a necessidade de haver uma tradução que não dependa de um tempo histórico, também considerando
+        que não haverá fotografias de satélite para todas as épocas, mas outras fontes de informação, precisei reavaliar
+        a abstração "mapa". Tentei pensar um denominador comum a todos os mapas, uma representação única, a-histórica,
+        que seja também mais fácil de ser traduzível entre si. Seguindo o trabalho histórico-urbanístico de <a
+            href="http://www.ceci-br.org/ceci/br/component/jcollection/item/28.html">José Luiz Mota Menezes</a> e a
+        maioria dos exemplos do projeto <i>pix2pix</i>, resolvi representar os mapas e fotografias de satélite através
+        de um <b>mapa de rótulos</b>.
+    </p>
+
+    <p>
+        Meu primeiro experimento foi rotular duas fotografias de satélite, quebrar em pedaços e separar em grupos de
+        treino e teste. As fotografias haviam sido utilizadas na tradução 2015-2010, então só precisei rotular e
+        organizar as entradas. Seguem os mapas:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/02.jpg" />
+    <p class="subtitle">Bairros da Boa Vista, Santo Antônio, São José e do Recife (2010)</p>
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/03.jpg" />
+    <p class="subtitle">Seu mapa de rótulos</p>
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/04.jpg" />
+    <p class="subtitle">Corte da Avenida Agamenon Magalhães (2010)</p>
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/05.jpg" />
+    <p class="subtitle">Seu mapa de rótulos</p>
+
+    <p>
+        As cores indicam construção humana (laranja), parques ou áreas verdes (verde), corpos de água (azul), corredores
+        viários (cinza) e pontes (vermelho). Os resultados foram visualmente melhores do que a tradução temporal:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/06.jpg" />
+    <p class="subtitle">A primeira linha de imagens mostra os recortes originais; a segunda linha mostra os rótulos
+        dados como entrada da rede; e na terceira, a previsão.</p>
+
+    <p>
+        Depois do modelo treinado, reconstrui as duas imagens usadas como um grande quebra-cabeça:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/07.jpg" />
+    <p class="subtitle">Bairros da Boa Vista, Santo Antônio, São José e do Recife (reconstruído pela rede)</p>
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/08.jpg" />
+    <p class="subtitle">Corte da Avenida Agamenon Magalhães (reconstruído pela rede)</p>
+
+    <h3>A importância dos rótulos</h3>
+
+    <p>
+        Porque eu não tive o cuidado de rotular as casas como entes individuais, mas sim uma "massa" amontoada de
+        construções, sem respeitar rigorosamente a divisão de blocos em todas as duas imagens, sem considerar os
+        diferentes tipos de ocupações e suas densidades, eu diria que a reprodução das construções no resultado final
+        foi o mais pobre dos rótulos. Ao contrário, os rótulos utilizados na demarcação de parques e áreas verdes foram
+        as que melhor tiveram desempenho em reproduzir até padrões exclusivos. O rótulo para pontes, diria que o de mais
+        detalhe, também destacou-se na reprodução dos padrões visuais de sua categoria.
+    </p>
+
+    <h3>Tentativa do passado</h3>
+
+    <p>
+        Percebendo que a partir de um mapa de rótulo era possível reconstruir uma visualização de satélite com
+        características interessantes, resgatei o mapa do Recife do ano de 1808, como visto no recorte abaixo:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/09.jpg" />
+    <p class="subtitle">Recorte do Porto do Plano e Praça de Pernambuco, por Jozé Fernandes Portugal (1808)</p>
+
+    <p>
+        Escolhi esse recorte por ser uma época da história onde uma configuração urbana próxima a noção contemporânea já
+        era presente e pelas nuances da região, presença dos rótulos utilizados no treinamento anterior. Como entrada
+        dessa rede, utilizei todos os mapas de rótulo da tentativa anterior, ou seja, os dois mapas de 2010 e recortei o
+        mapa de rótulos de 1808, como visto abaixo:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/10.jpg" />
+    <p class="subtitle">Mapa de rótulos do Recife 1808</p>
+
+    <p>
+        O treinamento levou 300 iterações e apresentou resultados satisfatórios diante da qualidade de rótulos
+        fornecidos:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/11.png" />
+    <p class="subtitle">A primeira coluna mostra alguns recortes do mapa e a segunda coluna o trabalho da rede</p>
+
+    <p>
+        A seguir é possível ver todas as imagens montando o panorama final:
+    </p>
+
+    <!-- Image -->
+    <img class="illustration" src="images/04/12.jpg" />
+    <p class="subtitle">Recorte do Porto do Plano e Praça de Pernambuco, por Jozé Fernandes Portugal (reconstruído pela
+        rede)</p>
+
+    <h3>E agora?</h3>
+
+    <p>
+        Como apontado, a qualidade dos rótulos e as texturas utilizadas no treinamento significam bastante para o
+        resultado da rede. Para os próximos passos, pretendo testar melhores rótulos e texturas, bem como outras
+        arquiteturas e testes em tradução entre mapas de rótulo.
+    </p>
+
+    <h3>Relacionado</h3>
+
+    <div class="button" out-href="03">
+        <img class="icon" src="../../../icons/things/paper.png" />
+        <p>Análise do artigo "pix2pix"</p>
+    </div>
+</div>

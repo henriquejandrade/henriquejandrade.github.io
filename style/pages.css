@@ -178,6 +178,12 @@ img.illustration.clickable:hover, img.full-illustration.clickable:hover {
     cursor: pointer;
 }
 
+img.pixelated {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
 .illustration-align-right {
     float: right;
     width: 50%;

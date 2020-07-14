@@ -184,7 +184,7 @@ img.pixelated {
     image-rendering: pixelated;
 }
 
-.illustration-align-right {
+.illustration.align-right {
     float: right;
     width: 50%;
     margin-top: 25pt;
@@ -193,7 +193,7 @@ img.pixelated {
 }
 
 @media screen and (max-width: 800px) {
-    .illustration-align-right {
+    .illustration.align-right {
         display: block;
         width: 100%;
         float: none;

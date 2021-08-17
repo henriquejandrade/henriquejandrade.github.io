@@ -117,6 +117,7 @@ body {
 }
 
 .front .main p {
+    text-align: left;
     margin-top: 0;
 }
 
@@ -153,6 +154,7 @@ body {
     background-color: var(--accent);
     padding: 25px;
     border-radius: 10px;
+    box-sizing: border-box;
     transform: rotateY(180deg);
 }
 
@@ -183,8 +185,8 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.3em;
     text-align: center;
-    letter-spacing: 1.5px;
-    line-height: 50px;
+    letter-spacing: 1.3px;
+    line-height: 40px;
     margin: 0;
 }
 
@@ -195,4 +197,43 @@ body {
 .back .button a {
     color: #FFF;
     text-decoration: none;
+}
+
+/* mobile */
+@media (max-width: 500px) {
+    .card {
+        /* text */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1em;
+        color: #000;
+        /* position */
+        position: absolute;
+        width: 80%;
+        height: 400px;
+        perspective: 1000px;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .front .title {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #FFF;
+        font-size: 2em;
+        line-height: 75px;
+        text-align: center;
+        /* letter-spacing: 1.25px; */
+        margin: 5px 0 0 0;
+    }
+
+    .back .title {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #FFF;
+        font-size: 2em;
+        line-height: 50px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        margin: 5px 0 5px 0;
+    }
 }

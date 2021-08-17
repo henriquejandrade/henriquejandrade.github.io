@@ -81,8 +81,25 @@ body {
     font-size: 3.5em;
     line-height: 75px;
     text-align: center;
-    letter-spacing: 1.5px;
+    /* letter-spacing: 1.25px; */
     margin: 5px 0 0 0;
+}
+
+/* title fading letters animation */
+
+.front .title span {
+    width: 0.55em;
+    opacity: 1;
+    display: inline-block;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.front .title span.fade {
+    width: 0 !important;
+    opacity: 0;
 }
 
 .front .subtitle {

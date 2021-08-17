@@ -1,6 +1,10 @@
 $(document).ready(function () {
     setBg();
     setInterval(setBg(), 60 * 1000); // 60 * 1000 milsec
+
+    $(".front .title").hover(function(){
+        $(".front .title span.vowel").toggleClass("fade");
+    });
 });
 
 /* animation */

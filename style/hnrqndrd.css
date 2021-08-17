@@ -20,7 +20,7 @@ body {
 
 .card {
     /* text */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito';
     font-size: 1em;
     color: #000;
     /* position */
@@ -76,7 +76,7 @@ body {
 }
 
 .front .title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton';
     color: #FFF;
     font-size: 3.5em;
     line-height: 75px;
@@ -103,7 +103,7 @@ body {
 }
 
 .front .subtitle {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito';
     color: #FFF;
     font-size: 1.25em;
     line-height: 15px;
@@ -113,6 +113,7 @@ body {
 
 .front .main {
     float: left;
+    padding-top: 5px;
     width: 60%;
 }
 
@@ -134,7 +135,9 @@ body {
 }
 
 .front .button {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Nunito';
+    font-weight: bold;
+    color: var(--accent);
     text-align: center;
     letter-spacing: 1.05px;
     line-height: 35px;
@@ -159,7 +162,7 @@ body {
 }
 
 .back .title {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton';
     color: #FFF;
     font-size: 2.5em;
     line-height: 50px;
@@ -169,7 +172,7 @@ body {
 }
 
 .back .subtitle {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito';
     color: #FFF;
     font-size: 1.25em;
     line-height: 15px;
@@ -182,8 +185,9 @@ body {
 }
 
 .back .button {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Nunito';
     font-size: 1.3em;
+    font-weight: bold;
     text-align: center;
     letter-spacing: 1.3px;
     line-height: 40px;
@@ -200,10 +204,11 @@ body {
 }
 
 /* mobile */
+
 @media (max-width: 500px) {
     .card {
         /* text */
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Nunito';
         font-size: 1em;
         color: #000;
         /* position */
@@ -216,9 +221,8 @@ body {
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
-
     .front .title {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Anton';
         color: #FFF;
         font-size: 2em;
         line-height: 75px;
@@ -226,9 +230,8 @@ body {
         /* letter-spacing: 1.25px; */
         margin: 5px 0 0 0;
     }
-
     .back .title {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Anton';
         color: #FFF;
         font-size: 2em;
         line-height: 50px;

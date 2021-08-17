@@ -1,0 +1,181 @@
+:root {
+    --accent: #FFF;
+    --accent-light: #FFF;
+}
+
+body {
+    background-color: #DDD;
+    width: 100%;
+    height: 100%;
+}
+
+.bg-overlay {
+    position: absolute;
+    background: linear-gradient(127deg, rgba(255, 255, 255, 0) 0%, rgba(50, 50, 50, 0.3) 100%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.card {
+    /* text */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    color: #000;
+    /* position */
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    perspective: 1000px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.card-inner {
+    position: relative;
+    /* shape */
+    background: var(--accent);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 2px 2px 1px 1px #00000022;
+}
+
+.card-flip {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.button a {
+    cursor: pointer;
+}
+
+.card-inner .front .content {
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    padding: 25px;
+    top: 110px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.front .title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFF;
+    font-size: 3.5em;
+    line-height: 75px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    margin: 5px 0 0 0;
+}
+
+.front .subtitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFF;
+    font-size: 1.25em;
+    line-height: 15px;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.front .main {
+    float: left;
+    width: 60%;
+}
+
+.front .main p {
+    margin-top: 0;
+}
+
+.front .nav {
+    float: left;
+    width: 40%;
+}
+
+.front hr {
+    opacity: 0.1;
+    border: 1px solid var(--accent);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.front .button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    letter-spacing: 1.05px;
+    line-height: 35px;
+    margin: 0;
+}
+
+.front .button a {
+    color: #000;
+    text-decoration: none;
+}
+
+.front .button:hover {
+    background: var(--accent-light);
+}
+
+.back {
+    background-color: var(--accent);
+    padding: 25px;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+
+.back .title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #FFF;
+    font-size: 2.5em;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    margin: 5px 0 5px 0;
+}
+
+.back .subtitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFF;
+    font-size: 1.25em;
+    line-height: 15px;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.back hr {
+    border: 1px solid #FFFFFF11;
+}
+
+.back .button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    letter-spacing: 1.5px;
+    line-height: 50px;
+    margin: 0;
+}
+
+.back .button:hover {
+    background: #FFFFFF22;
+}
+
+.back .button a {
+    color: #FFF;
+    text-decoration: none;
+}

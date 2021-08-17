@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104686652-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-104686652-1');
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }}</title>
+
+  <meta name="description" content="{{page.description}}" />
+  <meta name="theme-color" content="#EEEEEE" />
+  <meta property="og:title" content="{{page.metatitle}}" />
+  <meta property="og:image" content="{{page.cover-image}}" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="hnrqndrd.com">
+  <meta name="twitter:creator" content="@rickhenrique">
+  <meta name="twitter:title" content="{{ page.metatitle }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ page.cover-image }}">
+
+  <link href="https://www.hnrqndrd.com/style/hnrqndrd.css" rel="stylesheet">
+  <link href="https://www.hnrqndrd.com/style/hnrqndrd.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One|Noto+Sans+HK&display=swap" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+  {{ content }}
+</body>
+
+</html>

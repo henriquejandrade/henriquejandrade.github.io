@@ -50,7 +50,7 @@ body {
     /* position */
     position: relative;
     max-width: 800px;
-    margin: auto;
+    margin: auto 10px;
     z-index: 1;
 }
 

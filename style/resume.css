@@ -1,12 +1,96 @@
-div.icon-title {
-    display: flex;
-    height: auto;
-    line-height: 50pt;
-    margin-bottom: 15pt;
+:root {
+    --accent: #FFF;
+    --accent-light: #FFF;
 }
 
-div.icon-title>img {
-    margin-right: 10pt;
+body {
+    background-color: var(--accent-light);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.bg-overlay {
+    position: fixed;
+    background: linear-gradient(127deg, rgba(255, 255, 255, 0) 0%, rgba(50, 50, 50, 0.5) 100%);
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.header {
+    height: 100px;
+}
+
+.header .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.header .title p {
+    font-family: 'Anton';
+    font-size: 3em;
+    text-align: center;
+    color: var(--accent);
+    line-height: 100px;
+    margin: 0;
+}
+
+.page {
+    /* text */
+    font-family: 'Nunito';
+    font-size: 1em;
+    color: #000;
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px 50px 0 50px;
+    box-sizing: border-box;
+    /* position */
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    z-index: 1;
+}
+
+.page hr {
+    border: 1px solid var(--accent-light);
+}
+
+.page h1 {
+    color: var(--accent);
+}
+
+.section .icon-title {
+    height: 50px;
+}
+
+.section .icon-title img {
+    width: 50px;
+    height: 100%;
+    float: left;
+}
+
+.section .icon-title svg {
+    width: 50px;
+    height: 50px;
+    stroke: var(--accent);
+    stroke-width: 15;
+    fill: none;
+    float: left;
+}
+
+.section .icon-title h3 {
+    line-height: 50px;
+    color: var(--accent);
+    float: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.section .body {
+    padding-left: 25px;
 }
 
 p.section-subtitle {
